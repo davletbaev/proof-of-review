@@ -1,92 +1,54 @@
 .footer {
-  height: 6.25em;
-  color: $text-white;
-  background-color: $bg-footer;
+  font-size: 1rem;
 
   &__container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
+    border-top: 1px solid rgba(28, 46, 73, 0.1);
+    padding-top: 40px;
+    padding-bottom: 90px;
 
-  &__up {
-    margin-left: auto;
-    margin-right: 5em;
-    border: 0;
-    font-size: 1.625em;
-
-    &:hover,
-    &:focus {
-      opacity: 0.75;
+    @include media("<=992px") {
+      padding-bottom: 200px;
     }
   }
 
-  @include media("<1024px") {
-    &__up {
-      margin-right: auto;
-    }
-  }
-
-  @include media("<768px") {
-    height: auto;
-    padding: 1.5em 0;
-
-    &__container {
-      flex-wrap: wrap;
-      align-content: center;
-    }
-
-    &__up {
-      margin-right: 0;
-    }
-  }
-
-  @media print {
-    display: none;
+  &__copyright {
+    text-transform: uppercase;
+    font-size: 0.875em;
+    line-height: 2;
   }
 }
 
-.footer-nav {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  margin: 0 -10px 0 0;
-  padding: 0;
+.socials {
   list-style: none;
+  padding: 0;
+  margin: 0;
 
   &__item {
-    margin-left: 1.25em;
+    width: 30px;
+    height: 30px;
+
+    &:not(:first-child) {
+      margin-left: 25px;
+    }
   }
 
   &__link {
     display: inline-block;
-    padding: 10px;
-    color: inherit;
-    border: 0;
+    color: #4B4F6A;
 
-    &--active {
-      opacity: 0.75;
-      cursor: default;
-    }
-
-    @extend .link;
-  }
-
-  @include media("<768px") {
-    flex: 1 0 100%;
-    flex-wrap: wrap;
-    margin-top: 2.5em;
-    margin-left: -10px;
-
-    &__item {
-      margin-left: 0;
-      flex: 1 0 auto;
+    &:hover {
+      color: rgba(#4B4F6A, .8);
     }
   }
 
-  @include media("<=425px") {
-    &__item {
-      flex: 1 1 50%;
+  &__icon {
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    fill: currentColor;
+
+    &--discord {
+      height: 30px;
     }
   }
 }

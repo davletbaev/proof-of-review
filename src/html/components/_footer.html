@@ -1,24 +1,51 @@
 <footer class="footer">
-  <nav class="footer__container container">
-    {{ logo('footer__logo') }}
+  <div class="container footer__container">
+    <div class="row align-items-center justify-content-between">
+      <div class="footer__copyright text-lg-left text-xl-left text-center col-12 col-lg-auto order-2 order-lg-1 mt-5 mt-lg-0">
+        <span class="d-block d-lg-inline">COPYRIGHT © 2018 PROOF OF REVIEW.</span> <span class="d-block d-lg-inline">ALL RIGHTS RESERVED.</span>
+      </div>
 
-    <a href="#top" class="footer__up" title="To Top">
-      <i class="icon icon--up"></i>
-    </a>
+      <ul class="socials d-flex align-items-center justify-content-center col-12 col-lg-auto order-1">
+        <li class="socials__item">
+          <a href="#" class="socials__link" target="_blank">
+            <svg class="socials__icon">
+              <use xlink:href="img/icons.svg#medium"></use>
+            </svg>
+          </a>
+        </li>
 
-    <ul class="footer-nav">
-      {# <li class="footer-nav__item">
-        <a {% if currentPath != '/blog' %}href="/blog"{% endif %} class="footer-nav__link {% if currentPath == '/blog' %}footer-nav__link--active{% endif %}">Blog</a>
-      </li> #}
-      <li class="footer-nav__item">
-        <a {% if currentPath != '/about' %}href="/about"{% endif %} class="footer-nav__link {% if currentPath == '/about' %}footer-nav__link--active{% endif %}">About us</a>
-      </li>
-      <li class="footer-nav__item">
-        <a {% if currentPath != '/contacts' %}href="/contacts"{% endif %} class="footer-nav__link {% if currentPath == '/contacts' %}footer-nav__link--active{% endif %}">Contact us</a>
-      </li>
-      {# <li class="footer-nav__item">
-        <a {% if currentPath != '/work' %}href="/work"{% endif %} class="footer-nav__link {% if currentPath == '/work' %}footer-nav__link--active{% endif %}">Work with us</a>
-      </li> #}
-    </ul>
-  </nav>
+        <li class="socials__item">
+          <a href="#" class="socials__link" target="_blank">
+            <svg class="socials__icon">
+              <use xlink:href="img/icons.svg#email"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="socials__item">
+          <a href="#" class="socials__link" target="_blank">
+            <svg class="socials__icon">
+              <use xlink:href="img/icons.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="socials__item">
+          <a href="#" class="socials__link" target="_blank">
+            <svg class="socials__icon">
+              <use xlink:href="img/icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="socials__item">
+          <a href="#" class="socials__link" target="_blank">
+            <svg class="socials__icon socials__icon--discord">
+              <use xlink:href="img/icons.svg#discord-filled"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </footer>
