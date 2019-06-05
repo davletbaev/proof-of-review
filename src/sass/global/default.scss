@@ -14,22 +14,12 @@ $color-gray: gray;
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Rubik, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-}
-
-* {
-  box-sizing: inherit;
-  font-family: inherit;
-  outline: none;
 }
 
 body {
   min-height: 100vh;
-  color: $black;
+  color: #4B4F6A;
   display: flex;
   flex-direction: column;
 
@@ -47,4 +37,8 @@ input {
 a {
   color: $color-primary-2;
   text-decoration: none;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }

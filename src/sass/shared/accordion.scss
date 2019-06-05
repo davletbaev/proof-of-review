@@ -1,0 +1,46 @@
+.accordion {
+  padding: 30px 35px;
+
+  &__toggle {
+    position: relative;
+    padding-left: 60px;
+    color: inherit;
+
+    &-icon {
+      position: absolute;
+      top: 50%;
+      left: -10px;
+      transform: translateY(-50%);
+      fill: $primary;
+      width: 2.875em;
+      height: 2.875em;
+    }
+
+    &-arrow {
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      transform: translateY(-50%) rotate(180deg);
+      fill: $primary;
+      width: 2.25em;
+      height: 2.25em;
+      fill: #191D3A;
+      opacity: .6;
+    }
+
+    &.collapsed #{&} {
+      &-arrow {
+      transform: translateY(-50%);
+      }
+    }
+
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__content {
+    font-size: 1.125rem;
+  }
+}
