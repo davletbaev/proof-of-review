@@ -35,3 +35,11 @@
     border: 0;
   }
 }
+
+.btn-custom-primary {
+  color: $black;
+
+  &:hover {
+    color: #fff;
+  }
+}
