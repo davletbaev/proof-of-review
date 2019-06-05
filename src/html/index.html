@@ -4,9 +4,35 @@
 {% set currentPath = '/' %}
 
 {% block content %}
-  <img src="img/icons.svg#crosshairs">
+  <div class="container-fluid cover">
+    <div class="cover__bg"></div>
 
-  <svg class="img">
-    <use xlink:href="img/icons.svg#plus"></use>
-  </svg>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-5 col-lg-6">
+          <h1 class="text-uppercase mt-lg-5">
+            WELCOME TO PROOF OF REVIEW
+            BECOME INFORMED, DEVELOP AN EDGE
+          </h1>
+
+          <p>
+            We aim to increase transparency amongst projects and investors by improving the quality of the information in the crypto ecosystem.
+          </p>
+
+          <p>
+            We offer a range of services and insights to promote your brand awareness 
+            in this emerging industry and asset class.
+          </p>
+
+          <a href="/reviews" class="cover__btn btn btn-outline-light text-uppercase">Read Reviews</a>
+        </div>
+
+        <div class="d-none d-md-block col-7 col-lg-6">
+          <div class="cover__image-wrap">
+            {{ picture('Proof of Review', 'cover__image', '/img/home/cover', 'jpg') }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

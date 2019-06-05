@@ -1,3 +1,17 @@
+
+
+$color-primary: black;
+$color-primary-2: black;
+$color-primary-3: black;
+$text-dark-2: black;
+$text-dark: black;
+$text-white: white;
+$bg-white: white;
+$text-gray: gray;
+$text-gray-2: gray;
+$bg-gray: gray;
+$color-gray: gray;
+
 html,
 body {
   margin: 0;
@@ -15,9 +29,13 @@ body {
 
 body {
   min-height: 100vh;
-  color: $text-dark;
+  color: $black;
   display: flex;
   flex-direction: column;
+
+  @include media("<=992px") {
+    font-size: 0.875rem;
+  }
 }
 
 input {

@@ -1,32 +1,19 @@
 .cover {
-  padding-top: 200px;
-  height: 100vh;
-  max-height: 800px;
+  position: relative;
+  padding-top: 86px;
+  min-height: 700px;
+  height: auto;
   color: $text-white;
-  background: linear-gradient(136.81deg, #3F46E3 23.45%, #69FFD2 138.71%);
 
-  &:only-child {
-    flex: 1 0 auto;
-    height: auto;
-    max-height: none;
-  }
-  
-  &__container {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    text-align: center;
-    padding-bottom: 100px;
-    height: 100%;
-  }
-
-  &__item {
-    width: 100%;
-    flex: 0 0 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+  &__bg {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: $primary-dark;
+    transform: skew(0,-3deg)
   }
 
   &__title {
@@ -49,33 +36,56 @@
     white-space: pre-line;
   }
 
-  @include media("<1024px") {
-    padding-top: 200px;
-    max-height: none;
-    height: auto;
-    padding-bottom: 40px;
-    font-size: 0.8rem;
-  }
+  &__image {
+    position: relative;
+    bottom: 20px;
+    right: 20px;
+    width: 100%;
+    height: 100%;
+    font-family: 'object-fit: cover';
+    object-fit: cover;
 
-  @include media("<768px") {
-    font-size: 0.6rem;
+    &-wrap {
+      position: relative;
+      margin-top: 20px;
+      padding: 0 50px;
+      background-color: #18367B;
+      background-clip: content-box;
 
-    &__title {
-      text-align: center;
-    }
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        display: block;
+        width: 66px;
+        height: 139px;
+        background-image: url('/img/icons.svg#dots');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
 
-    &__desc {
-      text-align: center;
-      font-size: 1.7em;
-    }
+      &:before {
+        right: -30px;
+        top: -20px;
+      }
 
-    &__item {
-      flex: 1 0 100%;
-      align-items: center;
-
-      + .cover__item {
-        margin-top: 40px;
+      &:after {
+        left: -60px;
+        bottom: 0;
       }
     }
+  }
+
+  &__btn {
+    margin-top: 0.75em
+  }
+
+  p {
+    margin-bottom: 1.75em;
+  }
+
+  @include media("<=992px") {
+    min-height: 600px;
   }
 }
