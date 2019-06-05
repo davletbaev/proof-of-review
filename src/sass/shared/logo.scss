@@ -1,14 +1,11 @@
 .logo {
-  display: inline-block;
-  padding: 0 0.6em;
-  flex: 0 0 auto;
-  font-family: "Caslon", "Lato", sans-serif;
-  color: inherit;
-  font-size: 2em;
-  border-bottom: 0.0625em solid currentColor;
-  text-decoration: none;
+  height: 2.8125rem;
 
   &:hover {
     opacity: 0.75;
+  }
+
+  @include media("<=992px") {
+    height: 1.5rem;
   }
 }

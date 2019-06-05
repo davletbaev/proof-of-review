@@ -1,29 +1,11 @@
 @font-face {
-  font-family: "Lato";
+  font-family: "Rubik";
   font-weight: 400;
-  src: local("Lato-Regular"), local("Lato Regular"), url("../fonts/Lato-Regular.woff") format("woff");
+  src: local("Rubik-Regular"), local("Rubik Regular"), url("../fonts/Rubik-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Lato";
+  font-family: "Rubik";
   font-weight: 500;
-  src: local("Lato-Medium"), local("Lato Medium"), url("../fonts/Lato-Medium.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Lato";
-  font-weight: 600;
-  src: local("Lato-SemiBold"), local("Lato Semibold"), url("../fonts/Lato-Semibold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Lato";
-  font-weight: 700;
-  src: local("Lato-Bold"), local("Lato Bold"), url("../fonts/Lato-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Caslon";
-  font-weight: 400;
-  src: local("Caslon-Regular"), local("Caslon Regular"), url("../fonts/Caslon.woff2") format("woff2"), url("../fonts/Caslon.woff") format("woff");
+  src: local("Rubik-Medium"), local("Rubik Medium"), url("../fonts/Rubik-Medium.woff") format("woff");
 }

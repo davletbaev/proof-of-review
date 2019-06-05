@@ -1,35 +1,34 @@
-<header class="header {% if headerIsWhite %}header--white{% endif %}">
-  <nav class="header__container container">
-    {{ logo('header__logo') }}
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white align-items-stretch">
+    <div class="container d-flex justify-content-between align-items-stretch">
+      <a class="navbar-brand" href="#">
+        {{ picture('Proof of Review', 'logo', '/img/logo/logo', 'png') }}
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <button class="navbar-toggler navbar-toggler--close d-lg-none d-xl-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg class="navbar-toggler-icon--close">
+            <use xlink:href="img/icons.svg#plus"></use>
+          </svg>
+        </button>
 
-    <button data-toggle="#modalNav" class="toggle">
-      <span class="toggle__item toggle__item--first"></span>
-      <span class="toggle__item toggle__item--second"></span>
-    </button>
-
-    <div class="header__collapse" id="modalNav">
-      <div class="header__collapse-wrap">
-        <ul class="main-nav">
-          <li class="main-nav__item">
-            <a {% if currentPath != '/' %}href="/"{% endif %} class="main-nav__link {% if currentPath == '/' %}main-nav__link--active{% endif %}">Home</a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="main-nav__item">
-            <a href="/table" class="main-nav__link">Get Quotations</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reviews</a>
           </li>
-          <li class="main-nav__item">
-            <a {% if currentPath != '/types-of-insur' %}href="/types-of-insur"{% endif %} class="main-nav__link {% if currentPath == '/types-of-insur' %}main-nav__link--active{% endif %}">Types of Insurance</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
           </li>
-          <li class="main-nav__item">
-            <a {% if currentPath != '/industries' %}href="/industries"{% endif %} class="main-nav__link {% if currentPath == '/industries' %}main-nav__link--active{% endif %}">Industries</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Vote</a>
           </li>
-          <li class="main-nav__item">
-            <a {% if currentPath != '/about' %}href="/about"{% endif %} class="main-nav__link {% if currentPath == '/about' %}main-nav__link--active{% endif %}">About us</a>
-          </li>
-          <li class="main-nav__item">
-            <a {% if currentPath != '/contacts' %}href="/contacts"{% endif %} class="main-nav__link {% if currentPath == '/contacts' %}main-nav__link--active{% endif %}">Contact us</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="/login" class="topbar__item button button--white button--outline">Sign in</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
           </li>
         </ul>
       </div>

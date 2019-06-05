@@ -1,13 +1,15 @@
 @import 'include-media';
 
 @import 'global/variables';
+
+@import 'vendor/bootstrap/bootstrap.scss';
+
 @import 'global/default';
 @import 'global/fonts';
 @import 'global/utils';
 @import 'global/layout';
 
 @import 'vendor/slick';
-@import 'vendor/bootstrap/bootstrap.scss';
 
 @import 'shared/buttons/styles';
 @import 'shared/forms/styles';

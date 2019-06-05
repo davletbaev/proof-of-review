@@ -16,12 +16,12 @@
 // other navbar variations.
 
 .navbar {
+  height: 90px;
   position: relative;
   display: flex;
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
   justify-content: space-between; // space out brand from logo
-  padding: $navbar-padding-y $navbar-padding-x;
 
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properties so that content nested within behave properly.
@@ -31,6 +31,10 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+  }
+
+  @include media("<=992px") {
+    height: 60px;
   }
 }
 
@@ -47,6 +51,7 @@
   @include font-size($navbar-brand-font-size);
   line-height: inherit;
   white-space: nowrap;
+  align-self: center;
 
   @include hover-focus {
     text-decoration: none;
@@ -64,15 +69,18 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-
-  .nav-link {
-    padding-right: 0;
-    padding-left: 0;
-  }
+  height: 100%;
 
   .dropdown-menu {
     position: static;
     float: none;
+  }
+
+  @include media("<=992px") {
+    height: auto;
+    background: #FFFEFE;
+    border-radius: 4px;
+    padding: 40px 15px 15px;
   }
 }
 
@@ -102,11 +110,25 @@
   // For always expanded or extra full navbars, ensure content aligns itself
   // properly vertically. Can be easily overridden with flex utilities.
   align-items: center;
+
+  @include media("<=992px") {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    max-height: none !important;
+    height: auto !important;
+    transition: none !important;
+    padding: 20px 15px;
+    background-color: rgba(10, 22, 49, 0.8);
+  }
 }
 
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
-  padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
+  padding: 0;
+  align-self: center;
   @include font-size($navbar-toggler-font-size);
   line-height: 1;
   background-color: transparent; // remove default button style
@@ -127,7 +149,7 @@
   vertical-align: middle;
   content: "";
   background: no-repeat center center;
-  background-size: 100% 100%;
+  background-size: 1.5rem auto;
 }
 
 // Generate series of `.navbar-expand-*` responsive classes for configuring
@@ -138,13 +160,6 @@
     $infix: breakpoint-infix($next, $grid-breakpoints);
 
     &#{$infix} {
-      @include media-breakpoint-down($breakpoint) {
-        > .container,
-        > .container-fluid {
-          padding-right: 0;
-          padding-left: 0;
-        }
-      }
 
       @include media-breakpoint-up($next) {
         flex-flow: row nowrap;
@@ -155,11 +170,6 @@
 
           .dropdown-menu {
             position: absolute;
-          }
-
-          .nav-link {
-            padding-right: $navbar-nav-link-padding-x;
-            padding-left: $navbar-nav-link-padding-x;
           }
         }
 
@@ -217,16 +227,37 @@
     .nav-link.show,
     .nav-link.active {
       color: $navbar-light-active-color;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: $primary-dark;
+      }
     }
   }
 
   .navbar-toggler {
     color: $navbar-light-color;
-    border-color: $navbar-light-toggler-border-color;
+
+    &--close {
+      position: absolute;
+      top: 25px;
+      right: 20px;
+    }
   }
 
   .navbar-toggler-icon {
     background-image: $navbar-light-toggler-icon-bg;
+
+    &--close {
+      width: 34px;
+      height: 34px;
+      fill: #636A95;
+    }
   }
 
   .navbar-text {
