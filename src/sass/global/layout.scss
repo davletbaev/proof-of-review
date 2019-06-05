@@ -13,6 +13,14 @@
   @include media("<=992px") {
     margin-top: 3.75em;
   }
+
+  @include media("<768px") {
+    h2,
+    h3,
+    p {
+      text-align: left;
+    }
+  }
 }
 
 .section-fluid {
