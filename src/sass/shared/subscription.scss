@@ -42,4 +42,9 @@
       color: #fff;
     }
   }
+
+  @include media("<=768px") {
+    margin: 0 -15px;
+    border-radius: 0;
+  }
 }

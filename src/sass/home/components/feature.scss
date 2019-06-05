@@ -3,14 +3,22 @@
     width: 2.875em;
     height: 2.875em;
     fill: $primary;
+
+    @include media("<=992px") {
+      width: 2em;
+      height: 2em;
+    }
   }
 
   &__title {
     margin-top: 35px;
+
+    @include media("<=768px") {
+      margin-top: 1rem;
+    }
   }
 
   &__desc {
     font-size: 1.125rem;
-    white-space: pre-line;
   }
 }
