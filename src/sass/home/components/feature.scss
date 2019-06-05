@@ -1,0 +1,16 @@
+.feature {
+  &__icon {
+    width: 2.875em;
+    height: 2.875em;
+    fill: $primary;
+  }
+
+  &__title {
+    margin-top: 35px;
+  }
+
+  &__desc {
+    font-size: 1.125rem;
+    white-space: pre-line;
+  }
+}

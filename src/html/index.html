@@ -36,24 +36,24 @@
     </div>
   </div>
 
-  <div class="container section">
+  <section class="container section">
     <div class="row">
-      <div class="col-8 offset-2 text-left text-md-center">
-        <h2 class="text-uppercase">The Problem</h2>
+      <div class="col-12 col-lg-8 offset-lg-2 text-left text-md-center">
+        <div class="row justify-content-center">
+          <h2 class="col-12 text-uppercase">The Problem</h2>
 
-        <p>Our team consists of members who have been around the cryptocurrency sector since 2013 and seen the same cycles for many projects.</p>
+          <p class="col-12 col-lg-10">Our team consists of members who have been around the cryptocurrency sector since 2013 and seen the same cycles for many projects.</p>
+        </div>
 
         <div class="accordion card card-body text-left">
           <a class="accordion__toggle collapsed" data-toggle="collapse" href="#problem" role="button" aria-expanded="false" aria-controls="problem">
-            <svg class="accordion__toggle-icon">
-              <use xlink:href="img/icons.svg#crosshairs"></use>
-            </svg>
-            <h3 class="text-uppercase mb-0">
+            {{ icon('crosshairs', 'accordion__toggle-icon') }}
+
+            <h4 class="text-uppercase mb-0">
               The Problem
-            </h3>
-            <svg class="accordion__toggle-arrow">
-              <use xlink:href="img/icons.svg#chevron-top"></use>
-            </svg>
+            </h4>
+
+            {{ icon('chevron-top', 'accordion__toggle-arrow') }}
           </a>
           <div class="collapse accordion__content show" id="problem">
             <p class="mt-4">
@@ -69,26 +69,26 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container section">
+  <section class="container section">
     <div class="row">
-      <div class="col-8 offset-2 text-left text-md-center">
-        <h2 class="text-uppercase">The Solution</h2>
+      <div class="col-12 col-lg-8 offset-lg-2 text-left text-md-center">
+        <div class="row justify-content-center">
+          <h2 class="col-12 text-uppercase">The Solution</h2>
 
-        <p>At Proof of Review, we aim to solve these problems by providing institutional grade reviews on projects including POW coins, Tokens, Exchanges, Mining Pools, Security Token Offerings and Initial Exchange Offerings.</p>
+          <p class="col-12 col-lg-10">At Proof of Review, we aim to solve these problems by providing institutional grade reviews on projects including POW coins, Tokens, Exchanges, Mining Pools, Security Token Offerings and Initial Exchange Offerings.</p>
+        </div>
 
         <div class="accordion card card-body text-left">
           <a class="accordion__toggle collapsed" data-toggle="collapse" href="#solution" role="button" aria-expanded="false" aria-controls="solution">
-            <svg class="accordion__toggle-icon">
-              <use xlink:href="img/icons.svg#lightbulb"></use>
-            </svg>
-            <h3 class="text-uppercase mb-0">
+            {{ icon('lightbulb', 'accordion__toggle-icon') }}
+
+            <h4 class="text-uppercase mb-0">
               The Solution
-            </h3>
-            <svg class="accordion__toggle-arrow">
-              <use xlink:href="img/icons.svg#chevron-top"></use>
-            </svg>
+            </h4>
+
+            {{ icon('chevron-top', 'accordion__toggle-arrow') }}
           </a>
           <div class="collapse accordion__content show" id="solution">
             <p class="mt-4">
@@ -101,5 +101,57 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="container-fluid section-fluid">
+    <section class="bg bg-light"></section>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <h2 class="col-12 text-uppercase">PROOF OF REVIEW RESEARCH</h2>
+
+        <p class="col-12 col-lg-4">Become informed and gain an edge over your competition in the markets.</p>
+
+        <div class="row col-12 mt-5">
+          <div class="col-12 col-md-4">
+            <div class="feature text-left">
+              {{ icon('folder', 'feature__icon') }}
+
+              <h4 class="feature__title">INSTITUTIONAL GRADE REVIEWS</h4>
+
+              <p class="feature__desc">Our reviews are aimed to provide an 
+                                        in-depth analysis of projects in
+                                        the crypto ecosystem.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="feature text-left">
+              {{ icon('layers', 'feature__icon') }}
+
+              <h4 class="feature__title">MARKET INSIGHTS</h4>
+
+              <p class="feature__desc">Our team of analysts look at the current
+                                        state of the markets.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="feature text-left">
+              {{ icon('flag', 'feature__icon') }}
+
+              <h4 class="feature__title">PROJECT UPDATES</h4>
+
+              <p class="feature__desc">Receive monthly updates on all previous
+                                        Reports.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-offset-3 mt-5">
+          {% include "components/_subscription.html" %}
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock %}

@@ -1,0 +1,45 @@
+.subscription {
+  background-color: $primary;
+  padding: 40px;
+  border-radius: 8px;
+  color: $white;
+  
+  &__inner {
+    margin: 0 auto;
+    max-width: 350px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  &__desc {
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &__btn {
+    margin-top: 1rem;
+    background-color: $primary-dark;
+  }
+
+  .control__input {
+    color: white;
+    border-color: #8FAFF8;
+    background-color: #598BFC;
+
+    &::placeholder {
+      color: #fff;
+      opacity: 1;
+    }
+    
+    &:-ms-input-placeholder {
+      color: #fff;
+    }
+    
+    &::-ms-input-placeholder {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{% from "components/_forms.html" import field %}
+
+<div class="subscription">
+  <form class="subscription__inner">
+    <p class="subscription__title text-uppercase">Proof of Review research</p>
+
+    <p class="subscription__desc">
+      Sign up for our newsletter and receive our reports as soon as they are released
+    </p>
+
+    {{ field(type="email", name="email", placeholder="Email address", isRequired="true") }}
+
+    <button type="submit" class="btn btn-primary btn-block subscription__btn text-uppercase">Register</button>
+  </form>
+</div>
