@@ -1,0 +1,436 @@
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1110px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include media("<1200px") {
+    max-width: 980px;
+  }
+
+  @include media("<1024px") {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 768px;
+  }
+}
+
+.main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  margin-top: 6.25em;
+  font-size: 1rem;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 500;
+    line-height: 1.325;
+    text-align: center;
+    white-space: pre-line;
+  }
+
+  &__subtitle {
+    font-size: 1.125em;
+    margin-top: 0;
+    margin-bottom: 1.1em;
+    text-transform: uppercase;
+    color: $color-primary;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__desc {
+    max-width: 670px;
+    margin: 1.2em auto;
+    font-size: 1.25em;
+    line-height: 1.5;
+    text-align: center;
+    color: $text-dark-2;
+  }
+
+  &__content {
+    margin-top: 3.75em;
+  }
+
+  &__button {
+    margin-top: 4.5em;
+  }
+
+  &--lead {
+    margin-top: 0;
+  }
+
+  &--filled {
+    background: #FAF9FC;
+    padding: 3.75em 0;
+  }
+
+  &--first {
+    padding-top: 3rem;
+  }
+
+  &--last {
+    padding-bottom: 6.5em;
+  }
+
+  &--margin-lg {
+    margin-top: 12.5em;
+  }
+
+  &--invoice {
+    margin-top: 3.75em;
+  }
+
+  @include media("<1024px") {
+    font-size: 0.8rem;
+  }
+
+  @include media("<768px") {
+    &__title {
+      font-size: 2em;
+      white-space: normal;
+    }
+
+    &--margin-lg {
+      margin-top: 6.25em;
+    }
+  }
+}
+
+.inner-section {
+  margin-top: 1.5em;
+  padding: 1.5em;
+  font-size: 1.25rem;
+  background-color: rgba(248, 248, 252, 0.8);
+
+  &--first {
+    margin-top: 3em;
+  }
+
+  h1 {
+    margin: 2em 0 1.5em;
+    font-size: 2em;
+  }
+
+  h2 {
+    margin: 2em 0 1em;
+    font-size: 1.5em;
+  }
+
+  h3 {
+    margin: 2em 0 1em;
+    font-size: 1.3em;
+  }
+
+  h4 {
+    font-size: 1em;
+    margin: 2em 0 0.8em;
+  }
+
+  h5 {
+    font-size: 0.8em;
+    margin: 2em 0 1em;
+    font-weight: 700;
+  }
+
+  h6 {
+    font-size: 0.8em;
+    margin: 1.5em 0 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0.8em 0;
+    line-height: 1.5;
+    -webkit-hyphens: auto;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
+    -webkit-hyphenate-limit-chars: 6 3 3;
+    -webkit-hyphenate-limit-lines: 2;
+    -webkit-hyphenate-limit-last: always;   
+    -webkit-hyphenate-limit-zone: 8%;
+
+    -moz-hyphens: auto;
+    -moz-hyphenate-limit-chars: 6 3 3;
+    -moz-hyphenate-limit-lines: 2;  
+    -moz-hyphenate-limit-last: always;
+    -moz-hyphenate-limit-zone: 8%;
+
+    -ms-hyphens: auto;
+    -ms-hyphenate-limit-chars: 6 3 3;
+    -ms-hyphenate-limit-lines: 2;
+    -ms-hyphenate-limit-last: always;   
+    -ms-hyphenate-limit-zone: 8%;
+
+    hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    hyphenate-limit-lines: 2;
+    hyphenate-limit-last: always;   
+    hyphenate-limit-zone: 8%;
+  }
+
+  ul,
+  ol {
+    margin: 1em 0;
+    padding-left: 1em;
+
+    & > li {
+      padding-left: 0.8em;
+      line-height: 1.5;
+
+      &:not(:first-child) {
+        margin-top: 0.7em;
+      }
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.33;
+    font-weight: 500;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h2 + ul,
+  h3 + ul,
+  h4 + ul,
+  h5 + ul,
+  h6 + ul {
+  }
+
+  pre {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: inline-block;
+    border: 1px solid #D5D5E2;
+    padding: 1em;
+    border-radius: 0.375em;
+  }
+
+  figure {
+    margin: 1.5em 0;
+  }
+
+  a:not(.button) {
+    color: $color-primary;
+    
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid currentColor;
+    }
+  }
+
+  @include media("<768px") {
+    font-size: 1rem;
+  }
+}
+
+.outer-section {
+  margin-top: 5em;
+  font-size: 1.25rem;
+
+  &--first {
+    margin-top: 10em;
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+  }
+
+  h2 {
+    margin: 1.5em 0;
+    font-size: 1.5em;
+  }
+
+  h3 {
+    margin: 1.3em 0;
+    font-size: 1.3em;
+  }
+
+  h4 {
+    font-size: 1em;
+    margin: 0.8em 0;
+  }
+
+  h5 {
+    font-size: 0.8em;
+    margin: 1em 0;
+    font-weight: 700;
+  }
+
+  h6 {
+    font-size: 0.8em;
+    margin: 1em 0;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 2.25em 0;
+    line-height: 1.5;
+    -webkit-hyphens: auto;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
+    -webkit-hyphenate-limit-chars: 6 3 3;
+    -webkit-hyphenate-limit-lines: 2;
+    -webkit-hyphenate-limit-last: always;   
+    -webkit-hyphenate-limit-zone: 8%;
+
+    -moz-hyphens: auto;
+    -moz-hyphenate-limit-chars: 6 3 3;
+    -moz-hyphenate-limit-lines: 2;  
+    -moz-hyphenate-limit-last: always;
+    -moz-hyphenate-limit-zone: 8%;
+
+    -ms-hyphens: auto;
+    -ms-hyphenate-limit-chars: 6 3 3;
+    -ms-hyphenate-limit-lines: 2;
+    -ms-hyphenate-limit-last: always;   
+    -ms-hyphenate-limit-zone: 8%;
+
+    hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    hyphenate-limit-lines: 2;
+    hyphenate-limit-last: always;   
+    hyphenate-limit-zone: 8%;
+  }
+
+  ul,
+  ol {
+    margin: 1.5em 0;
+    padding-left: 1em;
+
+    & > li {
+      padding-left: 0.8em;
+      line-height: 1.5;
+
+      &:not(:first-child) {
+        margin-top: 0.7em;
+      }
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.33;
+    font-weight: 500;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    &--right {
+      float: right;
+      margin-left: 4em;
+    }
+
+    &--left {
+      float: left;
+      margin-right: 4em;
+    }
+
+    @include media("<1024px") {
+      &--right {
+        margin-left: 2em;
+        max-width: 50%;
+      }
+
+      &--left {
+        margin-right: 2em;
+        max-width: 50%;
+      }
+    }
+
+    @include media("<768px") {
+      &--right {
+        margin-left: 0;
+        margin-bottom: 2em;
+        float: none;
+        max-width: 100%;
+      }
+
+      &--left {
+        margin-right: 0;
+        margin-bottom: 2em;
+        float: none;
+        max-width: 100%;
+      }
+    }
+  }
+
+  pre {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: inline-block;
+    border: 1px solid #D5D5E2;
+    padding: 1em;
+    border-radius: 0.375em;
+  }
+
+  figure {
+    margin: 1.5em 0;
+  }
+
+  a:not(.button) {
+    color: $color-primary;
+    
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid currentColor;
+    }
+  }
+
+  @include media("<768px") {
+    font-size: 1rem;
+  }
+}

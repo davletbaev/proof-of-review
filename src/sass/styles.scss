@@ -1,0 +1,24 @@
+@import 'include-media';
+
+@import 'global/variables';
+@import 'global/default';
+@import 'global/fonts';
+@import 'global/utils';
+@import 'global/layout';
+
+@import 'vendor/slick';
+@import 'vendor/bootstrap/bootstrap.scss';
+
+@import 'shared/buttons/styles';
+@import 'shared/forms/styles';
+@import 'shared/header';
+@import 'shared/toggle';
+@import 'shared/footer';
+@import 'shared/cover';
+@import 'shared/logo';
+@import 'shared/iconic-block';
+@import 'shared/contact-card';
+@import 'shared/call-to-action';
+
+@import 'home/styles';
+@import 'contacts/styles';

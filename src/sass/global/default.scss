@@ -1,0 +1,32 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+  font-family: inherit;
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  color: $text-dark;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+a {
+  color: $color-primary-2;
+  text-decoration: none;
+}

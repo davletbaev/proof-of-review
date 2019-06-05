@@ -1,0 +1,82 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  box-shadow: none;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 2em;
+  height: 2.25em;
+  padding: 0 1em;
+  border-radius: 6px;
+  border: 1.4px solid transparent;
+  text-align: center;
+  cursor: pointer;
+
+  & .icon {
+    &:first-child {
+      margin-right: 0.625em;
+    }
+
+    &:last-child {
+      margin-left: 0.625em;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    .icon {
+      opacity: 0.5;
+    }
+  }
+
+  @include media("<768px") {
+    font-size: 0.8rem;
+  }
+}
+
+a.button:not(:link) {
+  cursor: not-allowed;
+
+  .icon {
+    opacity: 0.5;
+  }
+}
+
+.button--sm {
+  height: 1.875em;
+  line-height: 1.875em;
+  font-weight: 500;
+}
+
+.button--lg {
+  height: 2.875em;
+  line-height: 2.875em;
+}
+
+.button--wide {
+  padding: 0 2em;
+}
+
+.button--outline {
+  border-color: currentColor;
+
+  &:disabled {
+    border-color: #D2D5E8;
+    color: #D2D5E8;
+  }
+}
+
+.button--uppercase {
+  text-transform: uppercase;
+}
+
+.button--block {
+  display: block;
+  width: 100%;
+}

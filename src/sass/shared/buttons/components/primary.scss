@@ -1,0 +1,38 @@
+.button--primary {
+  color: $text-white;
+  background: $color-primary-2;
+
+  &:hover,
+  &:focus {
+    background: #6B7CE7;
+  }
+
+  &:disabled {
+    background: #D2D5E8;
+  }
+  
+  &.button--outline {
+    color: $color-primary-2;
+    background: none;
+
+    &:hover,
+    &:focus {
+      background: #EDEDFD;
+    }
+
+    &:disabled {
+      color: #D2D5E8;
+      background: none;
+    }
+  }
+}
+
+a.button--primary:not([href]) {
+  background: #D2D5E8;
+
+  &.button--outline {
+    color: #D2D5E8;
+    background: none;
+  }
+}
+
