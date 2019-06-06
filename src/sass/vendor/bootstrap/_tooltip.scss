@@ -36,9 +36,10 @@
     bottom: 0;
 
     &::before {
-      top: 0;
+      top: -1px;
       border-width: $tooltip-arrow-height ($tooltip-arrow-width / 2) 0;
       border-top-color: $tooltip-arrow-color;
+      z-index: $zindex-tooltip + 1;
     }
   }
 }
@@ -109,7 +110,10 @@
   max-width: $tooltip-max-width;
   padding: $tooltip-padding-y $tooltip-padding-x;
   color: $tooltip-color;
+  border: 1px solid #DADEEC;
   text-align: center;
   background-color: $tooltip-bg;
+  white-space: nowrap;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.16);
   @include border-radius($tooltip-border-radius);
 }

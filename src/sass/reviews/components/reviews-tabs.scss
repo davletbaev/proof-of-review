@@ -1,0 +1,31 @@
+.reviews-tabs {
+  &__nav {
+    border-bottom: 3px solid #ECECEC;
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: -5px;
+    outline: none;
+    fill: currentColor;
+  }
+
+  &__help {
+    margin-left: 8px;
+    color: $primary;
+    line-height: 0;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    background: none;
+    outline: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: darken($primary, 15%);
+      outline: none;
+    }
+  }
+}

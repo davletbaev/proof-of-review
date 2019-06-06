@@ -1,28 +1,52 @@
 .contacts-cover-info {
-  margin-top: auto;
-  margin-bottom: auto;
-  padding-top: 2em;
+  margin-top: 3em;
+  font-size: 1rem;
 
   &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    margin-top: 2em;
 
-    &:not(:first-child) {
-      margin-top: 1.5em;
+    &:last-child {
+      margin-top: 3em;
     }
   }
 
+  &__icon {
+    width: 1.5em;
+    height: 1.5em;
+    fill: #fff;
+  }
+
   &__label {
-    margin-bottom: 0.4em;
+    margin-top: 0.5em;
     font-size: 1.125em;
-    opacity: 0.85;
+    line-height: 1.66;
+    color: rgba(#fff, .85);
   }
 
   &__link {
-    color: $text-white;
-    font-size: 1.25em;
+    color: #fff;
+    font-size: 1.125em;
+    line-height: 1.66;
     
-    @extend .link;
+    &:hover,
+    &:focus {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+
+  @include media("<=992px") {
+    &__icon {
+      position: absolute;
+      top: 0.7em;
+      left: 0;
+    }
+
+    &__item {
+      padding-left: 3em;
+    }
   }
 }

@@ -1,6 +1,6 @@
 .cover {
   position: relative;
-  padding-top: 86px;
+  padding-top: 80px;
   padding-bottom: 150px;
   height: auto;
   color: $text-white;
@@ -14,6 +14,18 @@
     z-index: -1;
     background-color: $primary-dark;
     transform: skew(0,-3deg)
+  }
+
+  &--filled {
+    padding-bottom: 80px;
+    flex-grow: 1;
+  }
+
+  &--secondary {
+    padding-bottom: 60px;
+    background-image: linear-gradient(0deg, rgba(17, 51, 129, 0.7), rgba(17, 51, 129, 0.7)), url('/img/reviews/cover@1x.jpg');
+    background-size: cover;
+    background-position: center 100%;
   }
 
   &__title {
@@ -77,6 +89,12 @@
     }
   }
 
+  &__form {
+    &-wrap {
+      padding-left: 50px;
+    }
+  }
+
   &__btn {
     margin-top: 0.75em
   }
@@ -91,6 +109,12 @@
 
   @include media("<=992px") {
     padding-bottom: 90px;
+
+    &__form {
+      &-wrap {
+        padding-left: 15px;
+      }
+    }
   }
 
   @include media("<768px") {

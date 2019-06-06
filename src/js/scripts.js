@@ -4,6 +4,7 @@ $(document).ready(() => {
   objectFitImages()
   initAccordions()
   initSliders()
+  initTooltips()
 })
 
 function initAccordions() {
@@ -78,4 +79,8 @@ function initSliders() {
   
     createSlider(teamSlider)
   }
+}
+
+function initTooltips() {
+  $('[data-toggle="tooltip"]').tooltip()
 }

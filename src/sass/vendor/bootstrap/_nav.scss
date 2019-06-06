@@ -52,15 +52,20 @@
 //
 
 .nav-tabs {
-  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
-
   .nav-item {
     margin-bottom: -$nav-tabs-border-width;
+
+    &:not(:first-child) {
+      margin-left: 35px;
+    }
   }
 
   .nav-link {
-    border: $nav-tabs-border-width solid transparent;
-    @include border-top-radius($nav-tabs-border-radius);
+    padding-bottom: 10px;
+    color: rgba($black, .6);
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-bottom: $nav-tabs-border-width solid transparent;
 
     @include hover-focus {
       border-color: $nav-tabs-link-hover-border-color;

@@ -1,0 +1,92 @@
+{% extends "layouts/_base.html" %}
+
+{% set title = "Proof of Review / Reviews" %}
+{% set currentPath = '/reviews' %}
+
+{% block content %}
+  {# Cover #}
+  <section class="container-fluid cover cover--secondary">
+    <div class="container text-center">
+      <h1 class="text-uppercase mt-lg-5">
+        REVIEWS
+      </h1>
+
+      <p>
+        Our reviews provide an institutional grade analysis of projects across the sector including<br>
+        coins, exchange, mining pools and Initial Exchange Offerings and Security Token Offerings.
+      </p>
+
+      <p>
+        A full list of our reviews is available below.
+      </p>
+    </div>
+  </section>
+
+  <section class="container-fluid reviews-tabs__nav">
+    <div class="container mt-5">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+            COIN REVIEWS
+
+            <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+              {{ icon('question-circle', 'reviews-tabs__icon') }}
+            </button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+            EXCHANGES
+
+            <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+              {{ icon('question-circle', 'reviews-tabs__icon') }}
+            </button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+            MINING POOLS
+
+            <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+              {{ icon('question-circle', 'reviews-tabs__icon') }}
+            </button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+            STO
+
+            <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+              {{ icon('question-circle', 'reviews-tabs__icon') }}
+            </button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+            IEO
+
+            <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="We review the latest IEO projects.">
+              {{ icon('question-circle', 'reviews-tabs__icon') }}
+            </button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="reviews-tabs__content mt-4">
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+    </div>
+  </section>
+
+  <section class="contaienr section section--last">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-6 col-lg-offset-3 mt-5">
+        {% include "components/_subscription.html" %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
