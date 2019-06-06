@@ -17,6 +17,7 @@ $slick-opacity-not-active: 0.25 !default;
 /* Slider */
 
 .slider {
+    margin-top: 2.75em;
     width: 100%;
     position: relative;
   
@@ -35,11 +36,10 @@ $slick-opacity-not-active: 0.25 !default;
       }
     }
 
-    @include media("<1024px") {
-      &[data-slick="partners"] {
-        margin: 0 -20px;
-        width: 100vw;
-      }
+    @include media("<768px") {
+      width: 100vw;
+      margin-left: -15px;
+      margin-right: -15px;
     }
   }
 
@@ -62,7 +62,7 @@ $slick-opacity-not-active: 0.25 !default;
     position: relative;
     overflow: hidden;
     display: block;
-    margin: 0;
+    margin: 0 -10px;
     padding: 0;
 
     &:focus {
@@ -84,6 +84,10 @@ $slick-opacity-not-active: 0.25 !default;
         display: block;
         z-index: 1;
     }
+
+    @include media("<768px") {
+      margin: 0;
+    }
 }
 .slick-slider .slick-track,
 .slick-slider .slick-list {
@@ -98,6 +102,7 @@ $slick-opacity-not-active: 0.25 !default;
     position: relative;
     left: 0;
     top: 0;
+    padding-top: 3rem;
     display: flex;
     align-items: center;
     margin-left: auto;
@@ -116,12 +121,20 @@ $slick-opacity-not-active: 0.25 !default;
     .slick-loading & {
         visibility: hidden;
     }
+
+    @include media("<768px") {
+      padding-top: 0;
+    }
 }
 .slick-slide {
+    position: relative;
     float: left;
     height: 100%;
     min-height: 1px;
-    padding: 0 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    top: 0;
+    transition: top linear 0.3s;
 
     img {
         display: block;
@@ -150,6 +163,19 @@ $slick-opacity-not-active: 0.25 !default;
         height: auto;
         border: 1px solid transparent;
     }
+
+    &.slick-current {
+      top: -2em;
+    }
+
+    @include media("<768px") {
+      margin-left: 15px;
+      margin-right: 15px;
+
+      &.slick-current {
+        top: 0;
+      }
+    }
 }
 
 /* Slider */
@@ -164,30 +190,32 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-prev,
 .slick-next {
+  display: none;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 1.25rem;
   padding: 0;
   height: 3.125em;
   width: 3.125em;
   font-size: 1em;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 0.65em auto;
-  background-position: center center;
+  background-color: $primary;
   border: 0;
-  border-radius: 50%;
   box-shadow: none;
   cursor: pointer;
   z-index: 2;
 
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #fff;
+  }
+
   &:hover,
   &:focus {
-    background-color: #F2F1F6;
+    background-color: darken($primary, 15%);
   }
 
   &:active {
-    background-color: #E0DFE6;
+    background-color: darken($primary, 5%);
   }
 
   &.slick-disabled {
@@ -198,28 +226,42 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-  left: -2em;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' fill='none'%3E%3Cpath fill='%2352516E' d='M2.896 10L9.7 17.936a1.25 1.25 0 0 1-1.898 1.628l-7.5-8.75a1.25 1.25 0 0 1 0-1.627L7.8.437a1.25 1.25 0 0 1 1.898 1.627L2.896 10z'/%3E%3C/svg%3E%0A");
-
-  @include media("<1024px") {
-    left: -1em;
-  }
+  left: 15px;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 .slick-next {
-  right: -2em;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' fill='none'%3E%3Cpath fill='%2352516E' d='M7.104 10L.3 2.064A1.25 1.25 0 0 1 2.199.437l7.5 8.75a1.25 1.25 0 0 1 0 1.627l-7.5 8.75a1.25 1.25 0 0 1-1.898-1.628L7.104 10z'/%3E%3C/svg%3E%0A");
-
-  @include media("<1024px") {
-    right: -1em;
-  }
+  right: 15px;
+  border-radius: 0.5rem 0 0 0.5rem;
 }
 
-@include media("<1024px") {
-  .slider[data-slick="partners"] {
-    & .slick-next,
-    & .slick-prev {
-      display: none !important;
-    }
+.slick-dots {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+
+  li {
+    width: 82px;
+    height: 4px;
+  }
+
+  li + li {
+    margin-left: 10px;
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+    background-color: #EFF0F3;
+    text-indent: -9999px;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+  }
+
+  > .slick-active button {
+    background-color: #4B4F6A;
   }
 }
