@@ -1,7 +1,7 @@
 .cover {
   position: relative;
   padding-top: 86px;
-  min-height: 700px;
+  padding-bottom: 150px;
   height: auto;
   color: $text-white;
 
@@ -90,6 +90,11 @@
   }
 
   @include media("<=992px") {
-    min-height: 600px;
+    padding-bottom: 90px;
+  }
+
+  @include media("<768px") {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }

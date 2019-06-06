@@ -1,0 +1,37 @@
+.partner-card {
+  padding: 2.5em 2.7em;
+  margin-bottom: 3.75em;
+  background: #FFFEFE;
+  box-shadow: 0px 4px 12px rgba(4, 15, 41, 0.12);
+  border-radius: 0.5em;
+
+  &__pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 4.5em;
+    height: 4.5em;
+    box-shadow: 0px 4px 12px rgba(4, 15, 41, 0.12);
+    border-radius: 50%;
+
+    img {
+      max-width: 95%;
+      max-height: 95%;
+    }
+  }
+
+  &__title {
+    margin-top: 1.25rem;
+  }
+
+  h3,
+  p {
+    text-align: center;
+  }
+
+  @include media("<768px") {
+    padding: 1.5em 1em;
+    margin-bottom: 1.5em;
+  }
+}
