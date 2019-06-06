@@ -1,10 +1,11 @@
 {% extends "layouts/_base.html" %}
 
-{% set title = "Insure SME" %}
+{% set title = "Proof of Review / Home" %}
 {% set currentPath = '/' %}
 
 {% block content %}
-  <div class="container-fluid cover">
+  {# Cover #}
+  <section class="container-fluid cover">
     <div class="cover__bg"></div>
 
     <div class="container">
@@ -34,8 +35,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
+  {# The Problem #}
   <section class="container section">
     <div class="row">
       <div class="col-12 col-lg-8 offset-lg-2 text-left text-md-center">
@@ -46,7 +48,7 @@
         </div>
 
         <div class="accordion card card-body text-left">
-          <a class="accordion__toggle collapsed" data-toggle="collapse" href="#problem" role="button" aria-expanded="false" aria-controls="problem">
+          <a class="accordion__toggle" data-toggle="collapse" href="#problem" role="button" aria-expanded="false" aria-controls="problem">
             {{ icon('crosshairs', 'accordion__toggle-icon') }}
 
             <h4 class="text-uppercase mb-0">
@@ -55,7 +57,7 @@
 
             {{ icon('chevron-top', 'accordion__toggle-arrow') }}
           </a>
-          <div class="collapse accordion__content show" id="problem">
+          <div class="collapse accordion__content" id="problem">
             <p class="mt-4">
               We have seen several cycles of growth in this emerging industry, but there is an underlying issue remains for investors into the space. How do they analyse projects from the thousands out there and how to identify projects with potential while avoiding so-called "scam" projects. 
             </p>
@@ -71,6 +73,7 @@
     </div>
   </section>
 
+  {# The Solution #}
   <section class="container section">
     <div class="row">
       <div class="col-12 col-lg-8 offset-lg-2 text-left text-md-center">
@@ -81,7 +84,7 @@
         </div>
 
         <div class="accordion card card-body text-left">
-          <a class="accordion__toggle collapsed" data-toggle="collapse" href="#solution" role="button" aria-expanded="false" aria-controls="solution">
+          <a class="accordion__toggle" data-toggle="collapse" href="#solution" role="button" aria-expanded="false" aria-controls="solution">
             {{ icon('lightbulb', 'accordion__toggle-icon') }}
 
             <h4 class="text-uppercase mb-0">
@@ -90,7 +93,7 @@
 
             {{ icon('chevron-top', 'accordion__toggle-arrow') }}
           </a>
-          <div class="collapse accordion__content show" id="solution">
+          <div class="collapse accordion__content" id="solution">
             <p class="mt-4">
               We utilise our experience, knowledge and expertise to review these projects and share these reports to the public via our website and our social media following.
             </p>
@@ -103,6 +106,7 @@
     </div>
   </section>
 
+  {# Research #}
   <section class="container-fluid section-fluid">
     <section class="bg bg-light"></section>
 
@@ -155,6 +159,7 @@
     </div>
   </section>
 
+  {# Reports #}
   <section class="container section">
     <div class="row justify-content-center">
       <h2 class="col-12 text-uppercase">PROOF OF REVIEW RESEARCH REPORTS</h2>
@@ -241,6 +246,7 @@
     </div>
   </section>
 
+  {# Services #}
   <section class="container section">
     <div class="row justify-content-center">
       <h2 class="col-12 text-uppercase">PROOF OF REVIEW SERVICES</h2>
@@ -297,6 +303,7 @@
     </div>
   </section>
 
+  {# Out Team #}
   <section class="container-fluid section">
     <div class="container">
       <div class="row justify-content-center">
@@ -336,6 +343,7 @@
     </div>
   </section>
 
+  {# Out Partners #}
   <section class="container section">
     <div class="row justify-content-center">
       <h2 class="col-12 text-uppercase">OUR PARTNERS</h2>

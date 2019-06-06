@@ -36,6 +36,14 @@
   }
 }
 
+.text-lg {
+  font-size: 1.5em;
+
+  @include media("<768px") {
+    font-size: 1em;
+  }
+}
+
 .btn-custom-primary {
   color: $black;
 

@@ -1,0 +1,308 @@
+{% extends "layouts/_base.html" %}
+
+{% set title = "Proof of Review / Services" %}
+{% set currentPath = '/services' %}
+
+{% block content %}
+  <section class="container-fluid cover">
+    <div class="cover__bg"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-5 col-lg-6">
+          <h1 class="text-uppercase mt-lg-5">
+            PROOF OF REVIEW SERVICES
+            RAISE BRAND AWARENESS
+          </h1>
+
+          <p>
+            We aim to increase transparency amongst projects and investors
+            by improving the quality of the information in the crypto ecosystem.
+            We offer a range of services and insights to promote your brand awareness in this emerging industry and asset class.
+          </p>
+
+          <a href="/reviews" class="cover__btn btn btn-outline-light text-uppercase">Contact us</a>
+        </div>
+
+        <div class="d-none d-md-block col-7 col-lg-6">
+          <div class="cover__image-wrap">
+            {{ picture('Proof of Review Services', 'cover__image', '/img/services/cover', 'jpg') }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="row justify-content-center">
+      <h2 class="col-12 text-uppercase">PROOF OF REVIEW SERVICES</h2>
+
+      <div class="row col-12 text-center">
+        <div class="service col-12 col-md-4">
+          <div class="service__icon">
+            {{ icon('clipboard-text') }}
+          </div>
+
+          <p class="h3 text-uppercase mt-4">PROJECT REVIEW</p>
+        </div>
+
+        <div class="service col-12 col-md-4">
+          <div class="service__icon">
+            {{ icon('code') }}
+          </div>
+
+          <p class="h3 text-uppercase mt-4">CODE REVIEW</p>
+        </div>
+
+        <div class="service col-12 col-md-4">
+          <div class="service__icon">
+            {{ icon('video') }}
+          </div>
+
+          <p class="h3 text-uppercase mt-4">VIDEO REVIEW</p>
+        </div>
+
+        <div class="service col-12 col-md-4">
+          <div class="service__icon">
+            {{ icon('pulse') }}
+          </div>
+
+          <p class="h3 text-uppercase mt-4">STRATEGY</p>
+        </div>
+
+        <div class="service col-12 col-md-4">
+          <div class="service__icon">
+            {{ icon('presentation') }}
+          </div>
+
+          <p class="h3 text-uppercase mt-4">MARKETING</p>
+        </div>
+
+        <div class="service col-12 col-md-4">
+          <div class="service__icon">
+            {{ icon('bar-chart') }}
+          </div>
+
+          <p class="h3 text-uppercase mt-4">CONSULTATION</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="row">
+      <div class="col-12 text-left text-md-center">
+        <div class="row justify-content-center">
+          <h2 class="col-12 text-uppercase">PROJECT REVIEW</h2>
+
+          <p class="col-12 col-lg-8">Get your project reviewed by Proof of Review.</p>
+
+          <p class="col-12 col-lg-6">We work with your team to draw up an in-depth analysis about your project, including the fundamentals, competition, the team and community.</p>
+        </div>
+
+        <div class="accordion card card-body text-left mt-4 mt-md-5">
+          <a class="accordion__toggle" data-toggle="collapse" href="#project-review" role="button" aria-expanded="false" aria-controls="project-review">
+            {{ icon('clipboard-text', 'accordion__toggle-icon') }}
+
+            <h4 class="text-uppercase mb-0">
+              PROJECT REVIEW
+            </h4>
+
+            {{ icon('chevron-top', 'accordion__toggle-arrow') }}
+          </a>
+          <div class="collapse accordion__content" id="project-review">
+            <p>
+              Using our unique evaluation model, we analyse your project, providing it with a unique market rating and the review is posted on the official website proofofreview.com and promoted via all our Social Media channels, giving exposure to over 180,000 twitter users.
+            </p>
+            <p>
+              The review aims to inform the investing public about your project while also giving you a reference point on how to improve your project development and engagement.
+            </p>
+            <p>
+              The review can also be used by you to share with exchanges as a guide for them to consider listing your project.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="row">
+      <div class="col-12 text-left text-md-center">
+        <div class="row justify-content-center">
+          <h2 class="col-12 text-uppercase">CODE REVIEW</h2>
+
+          <p class="col-12 col-lg-6">Get your blockchain, platform or contract code reviewed by Proof of Review by our team of blockchain experts.</p>
+        </div>
+
+        <div class="accordion card card-body text-left mt-4 mt-md-5">
+          <a class="accordion__toggle" data-toggle="collapse" href="#code-review" role="button" aria-expanded="false" aria-controls="code-review">
+            {{ icon('code', 'accordion__toggle-icon') }}
+
+            <h4 class="text-uppercase mb-0">
+              CODE REVIEW
+            </h4>
+
+            {{ icon('chevron-top', 'accordion__toggle-arrow') }}
+          </a>
+          <div class="collapse accordion__content" id="code-review">
+            <p>
+              We work with your team to analyse the codebase for your project and provide an in-depth report.
+            </p>
+            <p> 
+              The code review is there to give you feedback on possible vulnerabilities, best practices and recommendations. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="row">
+      <div class="col-12 text-left text-md-center">
+        <div class="row justify-content-center">
+          <h2 class="col-12 text-uppercase">VIDEO REVIEW</h2>
+
+          <p class="col-12">We also offer our reviews in video format on our YouTube Channel.</p>
+        </div>
+
+        <div class="accordion card card-body text-left mt-4 mt-md-5">
+          <a class="accordion__toggle" data-toggle="collapse" href="#video-review" role="button" aria-expanded="false" aria-controls="video-review">
+            {{ icon('video', 'accordion__toggle-icon') }}
+
+            <h4 class="text-uppercase mb-0">
+              VIDEO REVIEW
+            </h4>
+
+            {{ icon('chevron-top', 'accordion__toggle-arrow') }}
+          </a>
+          <div class="collapse accordion__content" id="video-review">
+            <p>
+              Having a video review gives you significantly more reach and retention amongst the retail class of investors in the crypto currency sector.
+            </p>
+            <p> 
+              We are able to increase your reach amongst your target audience. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="row">
+      <div class="col-12">
+        <div class="row justify-content-center">
+          <h2 class="col-12 text-uppercase">MARKET ANALYSIS, CONSULTATION AND STRATEGY</h2>
+
+          <p class="col-12 col-lg-6">We support your project by providing consultation on your  market strategy and internally analysing your project. Some of the services we offer are:</p>
+        </div>
+
+        <div class="accordion card card-body text-left mt-4 mt-md-5">
+          <a class="accordion__toggle" data-toggle="collapse" href="#strategy" role="button" aria-expanded="false" aria-controls="strategy">
+            {{ icon('pulse', 'accordion__toggle-icon') }}
+
+            <h4 class="text-uppercase mb-0">
+              STRATEGY
+            </h4>
+
+            {{ icon('chevron-top', 'accordion__toggle-arrow') }}
+          </a>
+          <div class="collapse accordion__content" id="strategy">
+            <p>
+              We can help you finding and connecting to the companies that can provide a benefit to your project.
+            </p>
+            <p> 
+              Connecting with the rights partners can provide a massive benefit to your project both in terms of development and exposure. 
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion card card-body text-left mt-4">
+          <a class="accordion__toggle" data-toggle="collapse" href="#marketing" role="button" aria-expanded="false" aria-controls="marketing">
+            {{ icon('presentation', 'accordion__toggle-icon') }}
+
+            <h4 class="text-uppercase mb-0">
+              MARKETING
+            </h4>
+
+            {{ icon('chevron-top', 'accordion__toggle-arrow') }}
+          </a>
+          <div class="collapse accordion__content" id="marketing">
+            <p>
+              We currently are in regular contact with exchanges and we can advise you on the exchange listing process for each individual exchange we work with, the benefits of listing on a particular exchange, and support you with the listing process.
+            </p>
+            <p>
+              We also work with an exchange at the moment to review their coins for listing using their listing criteria. If your review meets these criteria you have the option to be listed at this exchange using our services.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion card card-body text-left mt-4">
+          <a class="accordion__toggle" data-toggle="collapse" href="#consultation" role="button" aria-expanded="false" aria-controls="consultation">
+            {{ icon('bar-chart', 'accordion__toggle-icon') }}
+
+            <h4 class="text-uppercase mb-0">
+              CONSULTATION
+            </h4>
+
+            {{ icon('chevron-top', 'accordion__toggle-arrow') }}
+          </a>
+          <div class="collapse accordion__content" id="consultation">
+            <p>
+              We can assist with all kinds of project management, strategy consulting and execution of your current plans.
+            </p>
+            <p>
+              We offer a service to review your project internally and then provide you with feedback on areas for improvement, development and growth.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion card card-body text-left mt-4">
+          <a class="accordion__toggle" data-toggle="collapse" href="#ux-review" role="button" aria-expanded="false" aria-controls="ux-review">
+            {{ icon('radar', 'accordion__toggle-icon') }}
+
+            <h4 class="text-uppercase mb-0">
+              UX REVIEW
+            </h4>
+
+            {{ icon('chevron-top', 'accordion__toggle-arrow') }}
+          </a>
+          <div class="collapse accordion__content" id="ux-review">
+            <p>
+              We currently work with a specialist crypto UX/UI service and can provide you with a review on your wallet, platform or website. Our team has several years of experience in handling many cryptocurrency wallets and platforms.
+            </p>
+            <p>
+              We can provide you with a detailed report your platforms UI and how to best improve your user experience and process.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion card card-body text-left mt-4">
+          <a class="accordion__toggle" data-toggle="collapse" href="#mining-consult" role="button" aria-expanded="false" aria-controls="mining-consult">
+            {{ icon('smiled', 'accordion__toggle-icon') }}
+
+            <h4 class="text-uppercase mb-0">
+              Mining Consultations
+            </h4>
+
+            {{ icon('chevron-top', 'accordion__toggle-arrow') }}
+          </a>
+          <div class="collapse accordion__content" id="mining-consult">
+            <p>
+              We are a team of experienced miners and can advise you on mining related issues or assistance on setting up mining operations.
+            </p>
+            <p>
+              We also are in touch with large mining operations across the globe to provide hashrate for a project or team.
+            </p>
+          </div>
+        </div>
+
+        <p class="col-9 col-lg-6 mr-auto ml-auto text-uppercase text-center text-lg mt-4 mt-md-5">Contact us today to discuss how our services can benefit your project</p>
+    
+        <a href="/contacts" class="btn align-self-center btn-outline-primary btn-custom-primary text-uppercase mt-2">Contact us</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}
