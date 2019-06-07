@@ -83,5 +83,7 @@ function initSliders() {
 
 function initTooltips() {
   const tooltipToggle = $('[data-toggle="tooltip"]')
-  tooltipToggle.tooltip()
+  tooltipToggle.tooltip({
+    boundary: 'window'
+  })
 }

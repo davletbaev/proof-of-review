@@ -53,6 +53,17 @@
 
 .nav-tabs {
   flex-wrap: nowrap;
+  padding-right: 35px;
+
+  @include media("<768") {
+    &:after {
+      content: '';
+      display: block;
+      height: 10px;
+      width: 50px;
+      flex: 0 0 50px;
+    }
+  }
 
   .nav-item {
     margin-bottom: -$nav-tabs-border-width;
