@@ -1,17 +1,3 @@
-
-
-$color-primary: black;
-$color-primary-2: black;
-$color-primary-3: black;
-$text-dark-2: black;
-$text-dark: black;
-$text-white: white;
-$bg-white: white;
-$text-gray: gray;
-$text-gray-2: gray;
-$bg-gray: gray;
-$color-gray: gray;
-
 html,
 body {
   -webkit-font-smoothing: antialiased;
@@ -32,11 +18,6 @@ input {
   border: none;
   background: none;
   box-shadow: none;
-}
-
-a {
-  color: $color-primary-2;
-  text-decoration: none;
 }
 
 p:last-child {
