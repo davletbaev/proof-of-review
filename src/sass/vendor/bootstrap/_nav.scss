@@ -52,11 +52,17 @@
 //
 
 .nav-tabs {
+  flex-wrap: nowrap;
+
   .nav-item {
     margin-bottom: -$nav-tabs-border-width;
 
     &:not(:first-child) {
       margin-left: 35px;
+    }
+
+    @include media("<=992px") {
+      margin-top: 0;
     }
   }
 
@@ -75,6 +81,11 @@
       color: $nav-link-disabled-color;
       background-color: transparent;
       border-color: transparent;
+    }
+
+    @include media("<=992px") {
+      font-size: 1rem;
+      white-space: nowrap;
     }
   }
 

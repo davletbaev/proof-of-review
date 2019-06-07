@@ -22,69 +22,176 @@
     </div>
   </section>
 
-  <section class="container-fluid reviews-tabs__nav">
+  <section class="container-fluid reviews-tabs__nav overflow-auto">
     <div class="container mt-5">
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
-            COIN REVIEWS
+      <div class="row">
+        <ul class="col-12 nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="coin-tab" data-toggle="tab" href="#coin" role="tab" aria-controls="coin" aria-selected="true">
+              COIN REVIEWS
 
-            <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-              {{ icon('question-circle', 'reviews-tabs__icon') }}
-            </button>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
-            EXCHANGES
+              <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                {{ icon('question-circle', 'reviews-tabs__icon') }}
+              </button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="exchanges-tab" data-toggle="tab" href="#exchanges" role="tab" aria-controls="exchanges" aria-selected="false">
+              EXCHANGES
 
-            <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-              {{ icon('question-circle', 'reviews-tabs__icon') }}
-            </button>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
-            MINING POOLS
+              <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                {{ icon('question-circle', 'reviews-tabs__icon') }}
+              </button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="mining-tab" data-toggle="tab" href="#mining" role="tab" aria-controls="mining" aria-selected="false">
+              MINING POOLS
 
-            <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-              {{ icon('question-circle', 'reviews-tabs__icon') }}
-            </button>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
-            STO
+              <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                {{ icon('question-circle', 'reviews-tabs__icon') }}
+              </button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="sto-tab" data-toggle="tab" href="#sto" role="tab" aria-controls="sto" aria-selected="false">
+              STO
 
-            <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-              {{ icon('question-circle', 'reviews-tabs__icon') }}
-            </button>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
-            IEO
+              <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                {{ icon('question-circle', 'reviews-tabs__icon') }}
+              </button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="ieo-tab" data-toggle="tab" href="#ieo" role="tab" aria-controls="ieo" aria-selected="false">
+              IEO
 
-            <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="We review the latest IEO projects.">
-              {{ icon('question-circle', 'reviews-tabs__icon') }}
-            </button>
-          </a>
-        </li>
-      </ul>
+              <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="We review the latest IEO projects.">
+                {{ icon('question-circle', 'reviews-tabs__icon') }}
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="reviews-tabs__content mt-4">
     <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+      <div class="tab-pane fade show active" id="coin" role="tabpanel" aria-labelledby="coin-tab">
+        <div class="table-responsive-md">
+          <div class="reviews-table text-uppercase text-center">
+            <div class="reviews-table__tr">
+              <div class="reviews-table__container container">
+                <div class="reviews-table__th">Coin</div>
+                <div class="reviews-table__th">Team Verified</div>
+                <div class="reviews-table__th">Review Date</div>
+                <div class="reviews-table__th">View</div>
+              </div>
+            </div>
+            <div class="reviews-table__tr">
+              <div class="reviews-table__container container">
+                <div class="reviews-table__td">Zero</div>
+                <div class="reviews-table__td">yes</div>
+                <div class="reviews-table__td">October 2018</div>
+                <div class="reviews-table__td">
+                  <a href="#">Review</a>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-table__tr">
+              <div class="reviews-table__container container">
+                <div class="reviews-table__td">Zero</div>
+                <div class="reviews-table__td">yes</div>
+                <div class="reviews-table__td">October 2018</div>
+                <div class="reviews-table__td">
+                  <a href="#">Review</a>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-table__tr">
+              <div class="reviews-table__container container">
+                <div class="reviews-table__td">Zero</div>
+                <div class="reviews-table__td">yes</div>
+                <div class="reviews-table__td">October 2018</div>
+                <div class="reviews-table__td">
+                  <a href="#">Review</a>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-table__tr">
+              <div class="reviews-table__container container">
+                <div class="reviews-table__td">Zero</div>
+                <div class="reviews-table__td">yes</div>
+                <div class="reviews-table__td">October 2018</div>
+                <div class="reviews-table__td">
+                  <a href="#">Review</a>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-table__tr">
+              <div class="reviews-table__container container">
+                <div class="reviews-table__td">Zero</div>
+                <div class="reviews-table__td">yes</div>
+                <div class="reviews-table__td">October 2018</div>
+                <div class="reviews-table__td">
+                  <a href="#">Review</a>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-table__tr">
+              <div class="reviews-table__container container">
+                <div class="reviews-table__td">Zero</div>
+                <div class="reviews-table__td">yes</div>
+                <div class="reviews-table__td">October 2018</div>
+                <div class="reviews-table__td">
+                  <a href="#">Review</a>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-table__tr">
+              <div class="reviews-table__container container">
+                <div class="reviews-table__td">Zero</div>
+                <div class="reviews-table__td">yes</div>
+                <div class="reviews-table__td">October 2018</div>
+                <div class="reviews-table__td">
+                  <a href="#">Review</a>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-table__tr">
+              <div class="reviews-table__container container">
+                <div class="reviews-table__td">Zero</div>
+                <div class="reviews-table__td">yes</div>
+                <div class="reviews-table__td">October 2018</div>
+                <div class="reviews-table__td">
+                  <a href="#">Review</a>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-table__tr">
+              <div class="reviews-table__container container">
+                <div class="reviews-table__td">Zero</div>
+                <div class="reviews-table__td">yes</div>
+                <div class="reviews-table__td">October 2018</div>
+                <div class="reviews-table__td">
+                  <a href="#">Review</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="exchanges" role="tabpanel" aria-labelledby="exchanges-tab">...</div>
+      <div class="tab-pane fade" id="mining" role="tabpanel" aria-labelledby="mining-tab">...</div>
+      <div class="tab-pane fade" id="sto" role="tabpanel" aria-labelledby="sto-tab">...</div>
+      <div class="tab-pane fade" id="ieo" role="tabpanel" aria-labelledby="ieo-tab">...</div>
     </div>
   </section>
 
-  <section class="contaienr section section--last">
+  <section class="container section section--last">
     <div class="row justify-content-center">
-      <div class="col-12 col-lg-6 col-lg-offset-3 mt-5">
+      <div class="col-12 col-lg-6 col-lg-offset-3">
         {% include "components/_subscription.html" %}
       </div>
     </div>

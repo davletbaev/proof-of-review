@@ -353,16 +353,16 @@ $table-cell-padding-sm:       .3rem !default;
 
 $table-color:                 $body-color !default;
 $table-bg:                    null !default;
-$table-accent-bg:             rgba($black, .05) !default;
+$table-accent-bg:             #F6F9FE !default;
 $table-hover-color:           $table-color !default;
 $table-hover-bg:              rgba($black, .075) !default;
 $table-active-bg:             $table-hover-bg !default;
 
-$table-border-width:          $border-width !default;
-$table-border-color:          $border-color !default;
+$table-border-width:          1px !default;
+$table-border-color:          #DFE1EE !default;
 
-$table-head-bg:               $gray-200 !default;
-$table-head-color:            $gray-700 !default;
+$table-head-bg:               transparent !default;
+$table-head-color:            $black !default;
 
 $table-dark-color:            $white !default;
 $table-dark-bg:               $gray-800 !default;
@@ -376,8 +376,8 @@ $table-striped-order:         odd !default;
 
 $table-caption-color:         $text-muted !default;
 
-$table-bg-level:              -9 !default;
-$table-border-level:          -6 !default;
+$table-bg-level:              0 !default;
+$table-border-level:          0 !default;
 
 
 // Buttons + Forms

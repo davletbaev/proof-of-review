@@ -82,5 +82,6 @@ function initSliders() {
 }
 
 function initTooltips() {
-  $('[data-toggle="tooltip"]').tooltip()
+  const tooltipToggle = $('[data-toggle="tooltip"]')
+  tooltipToggle.tooltip()
 }

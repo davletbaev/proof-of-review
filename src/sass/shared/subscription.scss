@@ -24,10 +24,11 @@
     background-color: $primary-dark;
   }
 
-  .control__input {
+  .form-control {
     color: white;
     border-color: #8FAFF8;
     background-color: #598BFC;
+    height: 50px;
 
     &::placeholder {
       color: #fff;
@@ -45,6 +46,15 @@
 
   @include media("<=768px") {
     margin: 0 -15px;
+    padding: 20px 15px;
     border-radius: 0;
+
+    &__title {
+      font-size: 1.125rem;
+    }
+
+    &__desc {
+      margin-bottom: 0.5rem;
+    }
   }
 }
