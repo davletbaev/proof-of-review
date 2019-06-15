@@ -5,7 +5,7 @@
 
 {% block content %}
   {# Cover #}
-  <section class="container-fluid cover">
+  <section class="container-fluid cover is-style-primary">
     <div class="cover__bg"></div>
 
     <div class="container">
@@ -25,7 +25,7 @@
             in this emerging industry and asset class.
           </p>
 
-          <a href="/reviews" class="cover__btn btn btn-outline-light text-uppercase">Read Reviews</a>
+          <a href="/reviews" class="cover__btn btn is-style-btn-outline-light text-uppercase">Read Reviews</a>
         </div>
 
         <div class="d-none d-md-block col-7 col-lg-6">
@@ -117,37 +117,33 @@
         <p class="col-12 col-lg-4">Become informed and gain an edge over your competition in the markets.</p>
 
         <div class="row col-12 mt-5">
-          <div class="col-12 col-md-4">
-            <div class="feature text-left">
-              {{ icon('folder', 'feature__icon') }}
-
-              <h4 class="feature__title">INSTITUTIONAL GRADE REVIEWS</h4>
-
-              <p class="feature__desc">Our reviews are aimed to provide an 
-                                        in-depth analysis of projects in
-                                        the crypto ecosystem.</p>
+          <div class="icon-block col-12 col-md-4 mt-5 is-style-feature">
+            <div class="icon-block__inner">
+              <div class="icon-block__icon">
+                {{ icon('folder') }}
+              </div>
+              <p class="h4 icon-block__title">INSTITUTIONAL GRADE REVIEWS</p>
+              <p class="icon-block__desc">Our reviews are aimed to provide an in-depth analysis of projects in the crypto ecosystem.</p>
             </div>
           </div>
 
-          <div class="col-12 col-md-4 mt-5 mt-md-0">
-            <div class="feature text-left">
-              {{ icon('layers', 'feature__icon') }}
-
-              <h4 class="feature__title">MARKET INSIGHTS</h4>
-
-              <p class="feature__desc">Our team of analysts look at the current
-                                        state of the markets.</p>
+          <div class="icon-block col-12 col-md-4 mt-5 is-style-feature">
+            <div class="icon-block__inner">
+              <div class="icon-block__icon">
+                {{ icon('layers') }}
+              </div>
+              <p class="h4 icon-block__title">MARKET INSIGHTS</p>
+              <p class="icon-block__desc">Our team of analysts look at the current state of the markets.</p>
             </div>
           </div>
 
-          <div class="col-12 col-md-4 mt-5 mt-md-0">
-            <div class="feature text-left">
-              {{ icon('flag', 'feature__icon') }}
-
-              <h4 class="feature__title">PROJECT UPDATES</h4>
-
-              <p class="feature__desc">Receive monthly updates on all previous
-                                        Reports.</p>
+          <div class="icon-block col-12 col-md-4 mt-5 is-style-feature">
+            <div class="icon-block__inner">
+              <div class="icon-block__icon">
+                {{ icon('flag') }}
+              </div>
+              <p class="h4 icon-block__title">PROJECT UPDATES</p>
+              <p class="icon-block__desc">Receive monthly updates on all previous Reports.</p>
             </div>
           </div>
         </div>
@@ -209,7 +205,7 @@
 
             <ul>
               <li>Development</li>
-              <li>Features</li>
+              <li>icon-blocks</li>
             </ul>
           </div>
 
@@ -252,52 +248,58 @@
       <h2 class="col-12 text-uppercase">PROOF OF REVIEW SERVICES</h2>
 
       <div class="row col-12 text-center">
-        <div class="service col-12 col-md-4">
-          <div class="service__icon">
-            {{ icon('clipboard-text') }}
+        <div class="icon-block col-12 col-md-4 mt-5 is-style-service">
+          <div class="icon-block__inner">
+            <div class="icon-block__icon">
+              {{ icon('clipboard-text') }}
+            </div>
+            <p class="h3 icon-block__title">PROJECT REVIEW</p>
           </div>
-
-          <p class="h3 text-uppercase mt-4">PROJECT REVIEW</p>
         </div>
 
-        <div class="service col-12 col-md-4">
-          <div class="service__icon">
-            {{ icon('code') }}
+        <div class="icon-block col-12 col-md-4 mt-5 is-style-service">
+          <div class="icon-block__inner">
+            <div class="icon-block__icon">
+              {{ icon('code') }}
+            </div>
+            <p class="h3 icon-block__title">CODE REVIEW</p>
           </div>
-
-          <p class="h3 text-uppercase mt-4">CODE REVIEW</p>
+        </div>
+        
+        <div class="icon-block col-12 col-md-4 mt-5 is-style-service">
+          <div class="icon-block__inner">
+            <div class="icon-block__icon">
+              {{ icon('video') }}
+            </div>
+            <p class="h3 icon-block__title">VIDEO REVIEW</p>
+          </div>
         </div>
 
-        <div class="service col-12 col-md-4">
-          <div class="service__icon">
-            {{ icon('video') }}
+        <div class="icon-block col-12 col-md-4 mt-5 is-style-service">
+          <div class="icon-block__inner">
+            <div class="icon-block__icon">
+              {{ icon('pulse') }}
+            </div>
+            <p class="h3 icon-block__title">STRATEGY</p>
           </div>
-
-          <p class="h3 text-uppercase mt-4">VIDEO REVIEW</p>
         </div>
 
-        <div class="service col-12 col-md-4">
-          <div class="service__icon">
-            {{ icon('pulse') }}
+        <div class="icon-block col-12 col-md-4 mt-5 is-style-service">
+          <div class="icon-block__inner">
+            <div class="icon-block__icon">
+              {{ icon('presentation') }}
+            </div>
+            <p class="h3 icon-block__title">MARKETING</p>
           </div>
-
-          <p class="h3 text-uppercase mt-4">STRATEGY</p>
         </div>
 
-        <div class="service col-12 col-md-4">
-          <div class="service__icon">
-            {{ icon('presentation') }}
+        <div class="icon-block col-12 col-md-4 mt-5 is-style-service">
+          <div class="icon-block__inner">
+            <div class="icon-block__icon">
+              {{ icon('bar-chart') }}
+            </div>
+            <p class="h3 icon-block__title">CONSULTATION</p>
           </div>
-
-          <p class="h3 text-uppercase mt-4">MARKETING</p>
-        </div>
-
-        <div class="service col-12 col-md-4">
-          <div class="service__icon">
-            {{ icon('bar-chart') }}
-          </div>
-
-          <p class="h3 text-uppercase mt-4">CONSULTATION</p>
         </div>
       </div>
     </div>
@@ -381,7 +383,7 @@
 
       <p class="col-9 col-md-12 text-uppercase text-center">If you wish to join as a partner please get in touch.</p>
       
-      <a href="/contacts" class="btn btn-outline-primary btn-custom-primary text-uppercase mt-2">Contact us</a>
+      <a href="/contacts" class="btn is-style-btn-outline-primary btn-custom-primary text-uppercase mt-2">Contact us</a>
     </div>
   </section>
 {% endblock %}

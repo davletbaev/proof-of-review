@@ -4,7 +4,7 @@
 {% set currentPath = '/services' %}
 
 {% block content %}
-  <section class="container-fluid cover">
+  <section class="container-fluid cover is-style-primary">
     <div class="cover__bg"></div>
 
     <div class="container">
@@ -21,7 +21,7 @@
             We offer a range of services and insights to promote your brand awareness in this emerging industry and asset class.
           </p>
 
-          <a href="/reviews" class="cover__btn btn btn-outline-light text-uppercase">Contact us</a>
+          <a href="/reviews" class="cover__btn btn is-style-btn-outline-light text-uppercase">Contact us</a>
         </div>
 
         <div class="d-none d-md-block col-7 col-lg-6">
@@ -38,52 +38,58 @@
       <h2 class="col-12 text-uppercase">PROOF OF REVIEW SERVICES</h2>
 
       <div class="row col-12 text-center">
-        <div class="service col-12 col-md-4">
-          <div class="service__icon">
-            {{ icon('clipboard-text') }}
+        <div class="icon-block col-12 col-md-4 mt-5 is-style-service">
+          <div class="icon-block__inner">
+            <div class="icon-block__icon">
+              {{ icon('clipboard-text') }}
+            </div>
+            <p class="h3 icon-block__title">PROJECT REVIEW</p>
           </div>
-
-          <p class="h3 text-uppercase mt-4">PROJECT REVIEW</p>
         </div>
 
-        <div class="service col-12 col-md-4">
-          <div class="service__icon">
-            {{ icon('code') }}
+        <div class="icon-block col-12 col-md-4 mt-5 is-style-service">
+          <div class="icon-block__inner">
+            <div class="icon-block__icon">
+              {{ icon('code') }}
+            </div>
+            <p class="h3 icon-block__title">CODE REVIEW</p>
           </div>
-
-          <p class="h3 text-uppercase mt-4">CODE REVIEW</p>
+        </div>
+        
+        <div class="icon-block col-12 col-md-4 mt-5 is-style-service">
+          <div class="icon-block__inner">
+            <div class="icon-block__icon">
+              {{ icon('video') }}
+            </div>
+            <p class="h3 icon-block__title">VIDEO REVIEW</p>
+          </div>
         </div>
 
-        <div class="service col-12 col-md-4">
-          <div class="service__icon">
-            {{ icon('video') }}
+        <div class="icon-block col-12 col-md-4 mt-5 is-style-service">
+          <div class="icon-block__inner">
+            <div class="icon-block__icon">
+              {{ icon('pulse') }}
+            </div>
+            <p class="h3 icon-block__title">STRATEGY</p>
           </div>
-
-          <p class="h3 text-uppercase mt-4">VIDEO REVIEW</p>
         </div>
 
-        <div class="service col-12 col-md-4">
-          <div class="service__icon">
-            {{ icon('pulse') }}
+        <div class="icon-block col-12 col-md-4 mt-5 is-style-service">
+          <div class="icon-block__inner">
+            <div class="icon-block__icon">
+              {{ icon('presentation') }}
+            </div>
+            <p class="h3 icon-block__title">MARKETING</p>
           </div>
-
-          <p class="h3 text-uppercase mt-4">STRATEGY</p>
         </div>
 
-        <div class="service col-12 col-md-4">
-          <div class="service__icon">
-            {{ icon('presentation') }}
+        <div class="icon-block col-12 col-md-4 mt-5 is-style-service">
+          <div class="icon-block__inner">
+            <div class="icon-block__icon">
+              {{ icon('bar-chart') }}
+            </div>
+            <p class="h3 icon-block__title">CONSULTATION</p>
           </div>
-
-          <p class="h3 text-uppercase mt-4">MARKETING</p>
-        </div>
-
-        <div class="service col-12 col-md-4">
-          <div class="service__icon">
-            {{ icon('bar-chart') }}
-          </div>
-
-          <p class="h3 text-uppercase mt-4">CONSULTATION</p>
         </div>
       </div>
     </div>
@@ -301,7 +307,7 @@
 
         <p class="col-9 col-lg-6 mr-auto ml-auto text-uppercase text-center text-lg mt-4 mt-md-5">Contact us today to discuss how our services can benefit your project</p>
     
-        <a href="/contacts" class="btn align-self-center btn-outline-primary btn-custom-primary text-uppercase mt-2">Contact us</a>
+        <a href="/contacts" class="btn align-self-center is-style-btn-outline-primary btn-custom-primary text-uppercase mt-2">Contact us</a>
       </div>
     </div>
   </section>

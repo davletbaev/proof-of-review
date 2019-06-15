@@ -11,30 +11,49 @@
       <div class="row">
         <div class="col-12 col-md-6 offset-md-3 offset-lg-0 order-2">
             <h1 class="d-none d-lg-block">PROOF OF REVIEW<br> CONTACT US</h1>
-
-            <div class="contacts-cover-info">
-
-              <div class="contacts-cover-info__item">
-                {{ icon('mail', 'contacts-cover-info__icon') }}
-                <span class="contacts-cover-info__label">Email Us on:</span>
-                <a href="mailto:contact@proofofreview.com" class="contacts-cover-info__link">contact@proofofreview.com</a>
+            
+            <div class="wp-block-cgb-block-at-icon-block icon-block is-style-contacts mt-5 mt-lg-0">
+              <div class="icon-block__inner">
+                <div class="icon-block__icon">
+                  {{ icon('mail') }}
+                </div>
+                <p class="icon-block__title">Email Us on:</p>
+                <p class="icon-block__desc">
+                  <a href="mailto:contact@proofofreview.com">contact@proofofreview.com</a>
+                </p>
               </div>
+            </div>
 
-              <div class="contacts-cover-info__item">
-                {{ icon('send', 'contacts-cover-info__icon') }}
-                <span class="contacts-cover-info__label">Chat with Us:</span>
-                <span class="contacts-cover-info__link">Click the Intercom icon on the bottom right</span>
+            <div class="wp-block-cgb-block-at-icon-block icon-block is-style-contacts">
+              <div class="icon-block__inner">
+                <div class="icon-block__icon">
+                  {{ icon('send') }}
+                </div>
+                <p class="icon-block__title">Chat with Us:</p>
+                <p class="icon-block__desc">
+                  Click the Intercom icon on the bottom right
+                </p>
               </div>
+            </div>
 
-              <div class="contacts-cover-info__item">
-                {{ icon('discord', 'contacts-cover-info__icon') }}
-                <span class="contacts-cover-info__label">Join our Discord:</span>
-                <a href="https://discord.gg/K8faBzV" class="contacts-cover-info__link">https://discord.gg/K8faBzV</a>
+            <div class="wp-block-cgb-block-at-icon-block icon-block is-style-contacts">
+              <div class="icon-block__inner">
+                <div class="icon-block__icon">
+                  {{ icon('discord') }}
+                </div>
+                <p class="icon-block__title">Join our Discord:</p>
+                <p class="icon-block__desc">
+                  <a href="https://discord.gg/K8faBzV" target="_blank">https://discord.gg/K8faBzV</a>
+                </p>
               </div>
+            </div>
 
-              <div class="contacts-cover-info__item">
-                <span class="contacts-cover-info__label">Visit Us:</span>
-                <a href="https://goo.gl/maps/KTB271JiWLkYJzeV8" target="_blank" class="contacts-cover-info__link">Floor 35, Citypoint, 1 Ropemaker St,<br> London EC2Y 9ST</a>
+            <div class="wp-block-cgb-block-at-icon-block icon-block is-style-contacts">
+              <div class="icon-block__inner">
+                <p class="icon-block__title">Visit Us:</p>
+                <p class="icon-block__desc">
+                  <a href="https://goo.gl/maps/KTB271JiWLkYJzeV8" target="_blank">Floor 35, Citypoint, 1 Ropemaker St,<br> London EC2Y 9ST</a>
+                </p>
               </div>
             </div>
         </div>
@@ -42,41 +61,33 @@
         <div class="col-12 col-md-10 offset-md-1 offset-lg-0 col-lg-6 cover__form-wrap order-1 order-lg-2">
           <h1 class="d-block d-lg-none text-center mb-4">PROOF OF REVIEW<br> CONTACT US</h1>
 
-          <div class="contacts-cover-card">
-            <div class="contacts-cover-card__body">
-              <h5 class="contacts-cover-card__title mt-0 text-left text-uppercase">Get in touch today.
+          <div class="contact-form">
+            <div class="contact-form__inner">
+              <h5 class="contact-form__title mt-0 text-left text-uppercase">Get in touch today.
                                                             We are only an email or call away.</h5>
 
-              <form class="login__form form" action="/" method="POST">
-                <div class="form__group">
-                  {{ field('Name', type="text", 'name', isRequired=true) }}
+              <form action="/" method="POST">
+                {{ field('Name', type="text", 'name', isRequired=true) }}
+
+                {{ field('Number', type="tel", 'number', isRequired=true) }}
+
+                {{ field('Email', type="email", 'email', isRequired=true) }}
+
+                {{ textarea('Message','message', isRequired=true) }}
+
+                <div class="form-group">
+                  <button class="btn is-style-btn-primary-dark btn-block" type="submit">SEND</button>
                 </div>
 
-                <div class="form__group">
-                  {{ field('Number', type="tel", 'number', isRequired=true) }}
-                </div>
-
-                <div class="form__group">
-                  {{ field('Email', type="email", 'email', isRequired=true) }}
-                </div>
-
-                <div class="form__group">
-                  {{ textarea('Message','message', isRequired=true) }}
-                </div>
-
-                <div class="form__group">
-                  <button class="btn btn-primary-dark btn-block" type="submit">SEND</button>
-                </div>
-
-                <div class="form__group">
-                  <small class="form__caption">
+                <div class="form-group">
+                  <p class="text-sm">
                     You agree by submitting this form,
                     we will be processing your data in accordance to our privacy policy.
                     Thank you.
-                  </small>
+                  </p>
                 </div>
 
-                <div class="form__group">
+                <div class="form-group mb-0">
                   <div class="alert alert-success" role="alert">
                     Application successfully submitted
                   </div>

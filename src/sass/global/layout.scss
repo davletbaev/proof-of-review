@@ -10,27 +10,40 @@
   font-size: 1rem;
   text-align: center;
 
+
+
+  &--filled:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #F6F9FE;
+    transform: skew(0, -5deg);
+    z-index: -1;
+  }
+
   @include media("<=992px") {
     margin-top: 3.75em;
   }
 
   @include media("<768px") {
-    h2,
-    h3,
-    p {
+    > h2,
+    > h3,
+    > p {
       text-align: left;
     }
   }
+}
 
-  &--last {
-    padding-bottom: 115px;
-
-    @include media("<=992px") {
-      padding-bottom: 80px;
-    }
-
-    @include media("<768px") {
-      padding-bottom: 40px;
+.container {
+  @include media("<768px") {
+    > h2,
+    > h3,
+    > p {
+      text-align: left;
     }
   }
 }

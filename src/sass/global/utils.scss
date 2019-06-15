@@ -17,7 +17,11 @@
   }
 }
 
-.btn-custom-primary {
+.text-sm {
+  font-size: 0.875em;
+}
+
+.is-style-btn-outline-primary {
   color: $black;
 
   &:hover {

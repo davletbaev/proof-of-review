@@ -5,7 +5,9 @@
 
 {% block content %}
   {# Cover #}
-  <section class="container-fluid cover cover--secondary">
+  <section class="container-fluid cover is-style-secondary">
+    <div class="cover__bg"></div>
+
     <div class="container text-center">
       <h1 class="text-uppercase mt-lg-5">
         REVIEWS
@@ -22,7 +24,7 @@
     </div>
   </section>
 
-  <section class="container-fluid reviews-tabs__nav overflow-auto">
+  <section class="container-fluid reviews-tabs__nav">
     <div class="container mt-5">
       <div class="row">
         <ul class="col-12 nav nav-tabs" id="myTab" role="tablist">
@@ -30,7 +32,7 @@
             <a class="nav-link active" id="coin-tab" data-toggle="tab" href="#coin" role="tab" aria-controls="coin" aria-selected="true">
               COIN REVIEWS
 
-              <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+              <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="We review projects across the sector including POW and Tokens.">
                 {{ icon('question-circle', 'reviews-tabs__icon') }}
               </button>
             </a>
@@ -39,7 +41,7 @@
             <a class="nav-link" id="exchanges-tab" data-toggle="tab" href="#exchanges" role="tab" aria-controls="exchanges" aria-selected="false">
               EXCHANGES
 
-              <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+              <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="We review exchanges across the sector.">
                 {{ icon('question-circle', 'reviews-tabs__icon') }}
               </button>
             </a>
@@ -48,7 +50,7 @@
             <a class="nav-link" id="mining-tab" data-toggle="tab" href="#mining" role="tab" aria-controls="mining" aria-selected="false">
               MINING POOLS
 
-              <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+              <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="We review mining pools across the sector.">
                 {{ icon('question-circle', 'reviews-tabs__icon') }}
               </button>
             </a>
@@ -57,7 +59,7 @@
             <a class="nav-link" id="sto-tab" data-toggle="tab" href="#sto" role="tab" aria-controls="sto" aria-selected="false">
               STO
 
-              <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+              <button class="reviews-tabs__help" data-toggle="tooltip" data-placement="top" title="We review the latest STO projects.">
                 {{ icon('question-circle', 'reviews-tabs__icon') }}
               </button>
             </a>
@@ -189,11 +191,7 @@
     </div>
   </section>
 
-  <section class="container section section--last">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-6 col-lg-offset-3">
-        {% include "components/_subscription.html" %}
-      </div>
-    </div>
+  <section class="container">
+    {% include "components/_subscription.html" %}
   </section>
 {% endblock %}

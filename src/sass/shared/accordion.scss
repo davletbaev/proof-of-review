@@ -1,8 +1,14 @@
 .accordion {
+  margin-top: 3rem;
   max-width: 790px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 35px;
+  text-align: left;
+
+  & + .accordion {
+    margin-top: 1.25rem;
+  }
 
   &__toggle {
     position: relative;
@@ -55,7 +61,6 @@
   }
 
   @include media("<=992px") {
-    margin-top: 1.5rem;
     padding: 0 20px;
 
     &__toggle {

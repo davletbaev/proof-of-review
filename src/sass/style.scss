@@ -1,0 +1,33 @@
+/*
+Theme Name: Proof of Review
+Author: Apptech Team
+Author URI: https://at-develop.ru/
+Description: Proof of Review wordpress theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: por
+*/
+
+@import 'include-media';
+
+@import 'vendor/bootstrap/bootstrap.scss';
+
+@import 'global/default';
+@import 'global/fonts';
+@import 'global/utils';
+@import 'global/layout';
+
+@import 'vendor/slick';
+
+@import 'shared/header';
+@import 'shared/footer';
+@import 'shared/cover';
+@import 'shared/logo';
+@import 'shared/accordion';
+@import 'shared/subscription';
+
+@import 'home/styles';
+@import 'contacts/styles';
+@import 'reviews/styles';
+@import 'vote/styles';

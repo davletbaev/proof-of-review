@@ -1,52 +1,84 @@
-.contacts-cover-info {
-  margin-top: 3em;
-  font-size: 1rem;
+.contacts-layout {
 
-  &__item {
+
+  @include media("<=992px") {
+    .wp-block-column {
+      flex-basis: 100%;
+    }
+
+    > .wp-block-column:last-child {
+      order: -1;
+    }
+  }
+}
+
+.is-style-contacts {
+  margin-top: 2em;
+
+  @include media("<=992px") {
+    max-width: 400px;
+    margin: 1em auto 0;
+  }
+
+  .icon-block__inner {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 2em;
 
-    &:last-child {
-      margin-top: 3em;
+
+
+    @include media("<=992px") {
+      padding-left: 3.5em;
     }
   }
 
-  &__icon {
-    width: 1.5em;
-    height: 1.5em;
-    fill: #fff;
+  &.no-icon {
+    padding-top: 3em;
+
+    @include media("<=992px") {
+      padding-top: 0;
+    }
   }
 
-  &__label {
+  .icon-block__icon {
+    svg {
+      width: 1.5em;
+      height: 1.5em;
+      fill: #fff;
+    }
+  }
+
+  .icon-block__title {
     margin-top: 0.5em;
+    margin-bottom: 0;
     font-size: 1.125em;
     line-height: 1.66;
     color: rgba(#fff, .85);
   }
 
-  &__link {
+  .icon-block__desc {
     color: #fff;
     font-size: 1.125em;
     line-height: 1.66;
-    
-    &:hover,
-    &:focus {
-      color: #fff;
-      text-decoration: underline;
+    margin: 0;
+
+    a {
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        color: #fff;
+        text-decoration: underline;
+      }
     }
+    
   }
 
   @include media("<=992px") {
-    &__icon {
+    .icon-block__icon {
       position: absolute;
       top: 0.7em;
       left: 0;
-    }
-
-    &__item {
-      padding-left: 3em;
     }
   }
 }

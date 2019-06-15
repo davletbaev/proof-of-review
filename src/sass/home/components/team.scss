@@ -1,11 +1,12 @@
 .member {
   margin-bottom: 2em;
-  max-width: 730px;
+  width: 730px;
   padding: 2em 4em 1.5em;
   background: #F9F9F9;
   box-shadow: 0px 4px 12px rgba(4, 15, 41, 0.12);
   border-radius: 0.5em;
   outline: none;
+  text-align: center;
 
   &.slick-current {
     background: #fff;
@@ -13,6 +14,7 @@
 
   &__name {
     margin-bottom: 0;
+    text-align: center;
   }
 
   &__link {
@@ -40,10 +42,11 @@
   }
 
   @include media("<=992px") {
-    max-width: 600px;
+    width: 600px;
   }
 
   @include media("<768px") {
+    padding: 15px;
     background: #fff;
   }
 }

@@ -1,0 +1,61 @@
+.contact-form {
+  position: relative;
+  text-align: left;
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    padding: 35px 50px;
+    color: #4B4F6A;
+    background: #FFFFFF;
+    border: 1px solid rgba(201, 195, 219, 0.5);
+    box-shadow: 0px 2px 20px rgba(7, 15, 37, 0.06);
+    border-radius: 0.5em;
+    background-color: #fff;
+  }
+
+  &__title {
+    text-align: left;
+    font-size: 1.125rem;
+    line-height: 1.66;
+    margin-bottom: 1.66em;
+    text-transform: uppercase;
+  }
+
+  label {
+    font-size: 1.125em;
+  }
+
+  .btn {
+    padding: 0.63rem 2rem;
+  }
+
+  .form-group {
+    position: relative;
+  }
+
+  .ajax-loader {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+  }
+
+  div.wpcf7-response-output {
+    display: none !important;
+  }
+
+  .alert {
+    display: none;
+
+    &.visible {
+      display: block;
+    }
+  }
+
+  @include media("<768px") {
+    &__inner {
+      padding: 2rem 1rem;
+    }
+  }
+}

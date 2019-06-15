@@ -1,11 +1,18 @@
-.logo {
+.custom-logo {
   height: 2.8125rem;
-
-  &:hover {
-    opacity: 0.75;
-  }
+  width: auto;
 
   @include media("<=992px") {
     height: 1.5rem;
+  }
+}
+
+.custom-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    opacity: 0.75;
   }
 }

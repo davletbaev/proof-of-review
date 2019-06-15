@@ -129,7 +129,8 @@
 
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
-  padding: 0;
+  margin-right: -0.5em;
+  padding: 0.5em;
   align-self: center;
   @include font-size($navbar-toggler-font-size);
   line-height: 1;
@@ -146,12 +147,10 @@
 // or image file as needed.
 .navbar-toggler-icon {
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.1em;
+  height: 0.75em;
   vertical-align: middle;
-  content: "";
-  background: no-repeat center center;
-  background-size: 1.5rem auto;
+  fill: #4B4F6A;
 }
 
 // Generate series of `.navbar-expand-*` responsive classes for configuring
@@ -249,12 +248,12 @@
       position: absolute;
       top: 25px;
       right: 20px;
+      margin: 0;
+      padding: 0;
     }
   }
 
   .navbar-toggler-icon {
-    background-image: $navbar-light-toggler-icon-bg;
-
     &--close {
       width: 34px;
       height: 34px;

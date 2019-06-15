@@ -3,7 +3,18 @@
   padding-top: 80px;
   padding-bottom: 150px;
   height: auto;
-  color: #fff;
+
+  &:only-child {
+    margin-bottom: -115px;
+
+    @include media("<=992px") {
+      margin-bottom: -80px;
+    }
+  
+    @include media("<768px") {
+      margin-bottom: -40px;
+    }
+  }
 
   &__bg {
     position: absolute;
@@ -12,7 +23,6 @@
     bottom: 0;
     right: 0;
     z-index: -1;
-    background-color: $primary-dark;
     transform: skew(0,-3deg)
   }
 
@@ -21,31 +31,57 @@
     flex-grow: 1;
   }
 
-  &--secondary {
+  &.is-style-primary {
+    color: #fff;
+
+    .cover__bg {
+      background-color: $primary-dark;
+    }
+
+    h1 {
+      color: inherit;
+    }
+  }
+
+  &.is-style-secondary {
+    color: #fff;
     padding-bottom: 60px;
-    background-image: linear-gradient(0deg, rgba(17, 51, 129, 0.7), rgba(17, 51, 129, 0.7)), url('/img/reviews/cover@1x.jpg');
-    background-size: cover;
-    background-position: center 100%;
+    background-image: linear-gradient(0deg, rgba(17, 51, 129, 0.7), rgba(17, 51, 129, 0.7));
+    text-align: center;
+
+    .cover__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      background-image: url('../img/reviews/cover@1x.jpg');
+      background-color: $primary-dark;
+      background-size: cover;
+      background-position: center 100%;
+      transform: none;
+
+      @include media("retina2x") {
+        background-image: url('../img/reviews/cover@2x.jpg')
+      }
+    }
+
+    h1 {
+      color: inherit;
+    }
+
+    @include media("retina2x") {
+      background-image: linear-gradient(0deg, rgba(17, 51, 129, 0.7), rgba(17, 51, 129, 0.7)), url('../img/reviews/cover@2x.jpg');
+    }
   }
 
-  &__title {
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 0.5em;
-    font-size: 2.5em;
-    line-height: 1.325;
-    font-weight: 700;
-    white-space: pre-line;
-  }
+  &.bg-primary-dark {
+    color: #fff;
 
-  &__desc {
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 1.5em;
-    font-size: 1.5em;
-    line-height: 1.5;
-    font-weight: 500;
-    white-space: pre-line;
+    h1 {
+      color: inherit;
+    }
   }
 
   &__image {
@@ -72,7 +108,7 @@
         display: block;
         width: 66px;
         height: 139px;
-        background-image: url('/img/icons.svg#dots');
+        background-image: url('../img/icons.svg#dots');
         background-size: 100%;
         background-repeat: no-repeat;
       }
@@ -95,12 +131,8 @@
     }
   }
 
-  &__btn {
-    margin-top: 0.75em
-  }
-
   h1 {
-    color: #fff;
+    text-transform: uppercase;
   }
 
   p {

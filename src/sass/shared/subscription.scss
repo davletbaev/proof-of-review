@@ -3,6 +3,8 @@
   padding: 40px;
   border-radius: 8px;
   color: $white;
+  max-width: 600px;
+  margin: 70px auto 0;
   
   &__inner {
     margin: 0 auto;
@@ -12,16 +14,19 @@
   &__title {
     font-size: 1.5rem;
     margin-bottom: 0.8rem;
+    text-align: center;
   }
 
   &__desc {
     margin-bottom: 2rem;
+    text-align: center;
     color: rgba(255, 255, 255, 0.7);
   }
 
-  &__btn {
-    margin-top: 1rem;
-    background-color: $primary-dark;
+  .form-group {
+    label:empty {
+      display: none;
+    }
   }
 
   .form-control {
@@ -29,6 +34,7 @@
     border-color: #8FAFF8;
     background-color: #598BFC;
     height: 50px;
+    line-height: 30px;
 
     &::placeholder {
       color: #fff;
@@ -44,8 +50,32 @@
     }
   }
 
+  .form-group {
+    position: relative;
+  }
+
+  .ajax-loader {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+  }
+
+  .wpcf7-response-output {
+    display: none !important;
+  }
+
+  .alert {
+    display: none;
+
+    &.visible {
+      display: block;
+    }
+  }
+
   @include media("<=768px") {
-    margin: 0 -15px;
+    max-width: none;
+    margin: 30px -15px 0;
     padding: 20px 15px;
     border-radius: 0;
 

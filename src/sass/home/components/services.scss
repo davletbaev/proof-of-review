@@ -1,7 +1,5 @@
-.service {
-  margin-top: 60px;
-
-  &__icon {
+.is-style-service {
+  .icon-block__icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -17,7 +15,13 @@
     }
   }
 
-  p {
+  .icon-block__title {
+    margin-top: 1em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .icon-block__desc {
     text-align: center;
   }
 }

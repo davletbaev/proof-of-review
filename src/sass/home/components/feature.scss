@@ -1,24 +1,29 @@
-.feature {
-  &__icon {
-    width: 2.875em;
-    height: 2.875em;
-    fill: $primary;
+.is-style-feature {
+  text-align: left;
 
-    @include media("<=992px") {
-      width: 2em;
-      height: 2em;
+  .icon-block__icon {
+    svg {
+      width: 2.875em;
+      height: 2.875em;
+      fill: $primary;
+  
+      @include media("<=992px") {
+        width: 2em;
+        height: 2em;
+      }
     }
   }
 
-  &__title {
-    margin-top: 35px;
+  .icon-block__title {
+    margin-top: 1em;
+    text-transform: uppercase;
 
     @include media("<=768px") {
       margin-top: 1rem;
     }
   }
 
-  &__desc {
+  .icon-block__desc {
     font-size: 1.125rem;
   }
 }
