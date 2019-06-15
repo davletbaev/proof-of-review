@@ -26,10 +26,10 @@
     
         let defaultOptions = {
           prevArrow: '<button type="button" class="slick-prev"><svg>' +
-            '<use xlink:href="/wp-content/themes/por/assets/img/icons.svg#arrow-left"></use>' +
+            '<use href="img/icons.svg#arrow-left"></use>' +
             '</svg></button>',
           nextArrow: '<button type="button" class="slick-next"><svg>' +
-          '<use xlink:href="/wp-content/themes/por/assets/img/icons.svg#arrow-right"></use>' +
+          '<use href="img/icons.svg#arrow-right"></use>' +
           '</svg></button>',
           slidesToShow: 1,
           initialSlide: 1,
